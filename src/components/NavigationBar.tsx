@@ -20,9 +20,8 @@ const NavigationBar = () => {
         <Navbar.Link href="/" active={true}>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/about">About</Navbar.Link>
-        <Navbar.Link href="/services">Services</Navbar.Link>
-        <Navbar.Link href="/pricing">Pricing</Navbar.Link>
+        {/* <Navbar.Link href="/interest">Interest</Navbar.Link> Dropdown with some categories */}
+        <Navbar.Link href="/about">About us</Navbar.Link>
         <Navbar.Link href="/contact">Contact</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
