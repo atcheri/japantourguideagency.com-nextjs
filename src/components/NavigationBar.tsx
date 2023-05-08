@@ -17,13 +17,13 @@ const NavigationBar = () => {
         </span>
       </Navbar.Brand>
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active={true}>
+        <Navbar.Link href="/" active={true}>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link href="/about">About</Navbar.Link>
+        <Navbar.Link href="/services">Services</Navbar.Link>
+        <Navbar.Link href="/pricing">Pricing</Navbar.Link>
+        <Navbar.Link href="/contact">Contact</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
