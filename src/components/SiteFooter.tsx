@@ -13,7 +13,7 @@ const SiteFooter: FC = () => {
             alt="Japan Tour Guide Agency - Logo"
             name="JTGA"
           />
-          <Footer.LinkGroup>
+          <Footer.LinkGroup className="flex justify-between">
             <Footer.Link href="/about" as={Link}>
               About
             </Footer.Link>
