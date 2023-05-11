@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
-import Footer from "./Footer";
 import { Inter } from "next/font/google";
 import NavBarTw from "./NavBarTw";
+import SiteFooter from "./SiteFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ const Layout: FC<PropsWithChildren<{}>> = ({ children }) => {
       >
         {children}
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   );
 };
