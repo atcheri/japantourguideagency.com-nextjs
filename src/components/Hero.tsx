@@ -1,5 +1,14 @@
+import { Carousel } from "flowbite-react";
+import Image from "next/image";
+import HeroCarousel from "./Hero/HeroCarousel";
+import HeroReactResponsiveCarousel from "./Hero/HeroCarouselReactResponsive";
+
 const Hero = () => {
-  return <div>Hero</div>;
+  return (
+    <>
+      <HeroReactResponsiveCarousel />
+    </>
+  );
 };
 
 export default Hero;
