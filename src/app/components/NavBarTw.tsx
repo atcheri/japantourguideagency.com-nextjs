@@ -1,5 +1,3 @@
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -14,6 +12,9 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react";
+
 import Image from "next/image";
 
 function classNames(...classes: string[]) {

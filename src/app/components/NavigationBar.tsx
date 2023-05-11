@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import Link from "next/link";
+import { Navbar } from "flowbite-react";
 
 const NavigationBar = () => {
   return (

@@ -1,4 +1,7 @@
+"use client";
+
 import { FC, PropsWithChildren } from "react";
+
 import { Inter } from "next/font/google";
 import NavBarTw from "./NavBarTw";
 import SiteFooter from "./SiteFooter";

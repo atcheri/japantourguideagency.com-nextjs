@@ -1,9 +1,12 @@
+"use client";
+
 import { Button } from "flowbite-react";
+import { FC } from "react";
 import { HiOutlineHomeModern } from "react-icons/hi2";
 import Image from "next/image";
 import Link from "next/link";
 
-const page404 = () => {
+const NotFound: FC = () => {
   return (
     <div className="h-screen w-screen bg-gray-100 flex justify-center items-center">
       <div className="container flex flex-col md:flex-row items-center justify-center px-5 text-gray-700">
@@ -35,4 +38,4 @@ const page404 = () => {
   );
 };
 
-export default page404;
+export default NotFound;
