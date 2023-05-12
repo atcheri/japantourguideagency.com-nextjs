@@ -23,6 +23,9 @@ const SiteFooter: FC = () => {
             <Footer.Link href="#" as={Link}>
               Licensing
             </Footer.Link>
+            <Footer.Link href="/faq" as={Link}>
+              FAQ
+            </Footer.Link>
             <Footer.Link href="/contact" as={Link}>
               Contact
             </Footer.Link>
