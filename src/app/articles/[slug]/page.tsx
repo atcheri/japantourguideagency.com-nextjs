@@ -1,11 +1,8 @@
+import { apiEndpoint } from "@/constants/routes";
 import { stylePostContent } from "../helpers";
+import { fetchPostBySlug } from "@/helpers/post";
+import { Article } from "../types";
 
-const apiEndpoint = process.env.API_ENDPOINT;
-if (!apiEndpoint) {
-  throw Error(
-    "no API_ENDPOINT environement variable defined. Please check your .env file"
-  );
-}
 const postEndpoint = `${apiEndpoint}/posts`;
 
 // doc: https://nextjs.org/docs/app/api-reference/functions/generate-static-params
@@ -17,36 +14,20 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return response.map((p) => ({ slug: p.slug }));
 }
 
-type ArticleProps = {
-  title: string;
-  content: string;
-};
+type ArticleProps = Article;
 
-const fetchPostData = async (slug: string): Promise<ArticleProps> => {
-  const response = await fetch(`${postEndpoint}?slug=${slug}`, {
-    // cache: "no-store",
-    next: { revalidate: 10 }, // 10seconds
-  });
-  if (!response) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const posts = await response.json();
-  if (!posts.length) {
-    throw new Error("No data found");
-  }
-
-  const post = posts[0];
+const fetchAndStylePostData = async (slug: string): Promise<ArticleProps> => {
+  const post = await fetchPostBySlug(slug);
 
   return {
-    title: post.title.rendered,
-    content: stylePostContent(post.content.rendered),
+    title: post.title,
+    content: stylePostContent(post.content),
   };
 };
 
 // The rendered component part
 const Article = async ({ params: { slug } }: { params: { slug: string } }) => {
-  const post = await fetchPostData(slug);
+  const post = await fetchAndStylePostData(slug);
 
   return (
     <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
