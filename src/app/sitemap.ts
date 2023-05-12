@@ -1,13 +1,6 @@
-import { ROUTES } from "@/constants/routes";
+import { ROUTES, domain } from "@/constants/routes";
+
 import { fetchPosts } from "@/helpers/post";
-
-const domain = process.env.DOMAIN_URL;
-
-if (!domain) {
-  throw Error(
-    "no DOMAIN_URL environement variable defined. Please check your .env file"
-  );
-}
 
 const sitemap = async () => {
   const now = new Date().toISOString();

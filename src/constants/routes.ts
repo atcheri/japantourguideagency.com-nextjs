@@ -1,3 +1,11 @@
+export const domain = process.env.DOMAIN_URL;
+
+if (!domain) {
+  throw Error(
+    "no DOMAIN_URL environement variable defined. Please check your .env file"
+  );
+}
+
 export const apiEndpoint = process.env.API_ENDPOINT;
 if (!apiEndpoint) {
   throw Error(
