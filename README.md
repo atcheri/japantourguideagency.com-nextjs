@@ -2,13 +2,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First install all the dependencies:
+
+```shell
+$ pnpm i
+```
+
+Second, Copy the `env.example` to `.env.local`
+
+```shell
+$ cp env.example .env
+```
+
+Then, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
