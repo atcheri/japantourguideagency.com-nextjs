@@ -10,7 +10,7 @@ const Layout: FC<PropsWithChildren<{}>> = ({ children }) => {
     <>
       <NavBarTw />
       <main
-        className={`min-h-screen mx-auto max-w-6xl flex flex-col items-center justify-between`}
+        className={`min-h-screen mx-auto w-full max-w-4xl flex flex-col items-center justify-between`}
       >
         {children}
       </main>
