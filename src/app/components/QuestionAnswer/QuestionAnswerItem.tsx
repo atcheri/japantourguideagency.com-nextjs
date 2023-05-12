@@ -26,9 +26,9 @@ const QuestionAnswerItem: FC<QuestionAnswerProps> = ({ question, answer }) => {
           <HiPlus className="flex-shrink-0 w-6 h-6 text-blue-700 dark:text-blue-400" />
         )}
 
-        <h1 className="mx-4 text-xl text-gray-700 dark:text-white">
+        <h2 className="mx-4 text-xl text-gray-700 dark:text-white">
           {question}
-        </h1>
+        </h2>
       </button>
 
       {opened && (
