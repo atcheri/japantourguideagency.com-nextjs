@@ -2,16 +2,18 @@
 
 import { FC, PropsWithChildren } from "react";
 
-import NavBarTw from "./NavBarTw";
+import NavBar from "./NavBar";
 import SiteFooter from "./SiteFooter";
+import { usePathname } from "next/navigation";
 
 const Layout: FC<PropsWithChildren<{}>> = ({ children }) => {
+  const path = usePathname();
+  const isHome = path === "/";
+
   return (
     <>
-      <NavBarTw />
-      <main
-        className={`min-h-screen mx-auto max-w-6xl flex flex-col items-center justify-between`}
-      >
+      <NavBar />
+      <main className={`min-h-screen mx-auto ${!isHome && "mt-24"}`}>
         {children}
       </main>
       <SiteFooter />

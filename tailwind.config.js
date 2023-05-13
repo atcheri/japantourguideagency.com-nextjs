@@ -9,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern":
+          "url('https://store.japantourguideagency.com/wp-content/uploads/2023/05/matcha-obon-bamboo.jpg')",
       },
     },
   },
