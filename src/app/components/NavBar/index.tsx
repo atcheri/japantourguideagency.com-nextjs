@@ -1,24 +1,9 @@
-import {
-  AcademicCapIcon,
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  DocumentTextIcon,
-  FingerPrintIcon,
-  InformationCircleIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  EnvelopeIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { FC, Fragment, useState } from "react";
 import { bestTours, callsToAction, companyInfo } from "./constants";
 
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import DesktopNavBar from "./DesktopNavBar";
 import Image from "next/image";
 import Link from "next/link";
@@ -80,12 +65,12 @@ const NavBar: FC = () => {
           </Transition.Child>
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
+            enter="transform transition ease-in-out duration-500 sm:duration-700"
+            enterFrom="translate-x-full"
+            enterTo="translate-x-0"
+            leave="transform transition ease-in-out duration-500 sm:duration-700"
+            leaveFrom="translate-x-0"
+            leaveTo="translate-x-full"
           >
             <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
               <div className="flex items-center justify-between">
