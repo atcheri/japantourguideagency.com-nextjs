@@ -35,4 +35,8 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
     name: "FAQ",
     path: "/faq",
   },
+  STORE: {
+    name: "STORE",
+    path: `https://store.japantourguideagency.com`,
+  },
 });
