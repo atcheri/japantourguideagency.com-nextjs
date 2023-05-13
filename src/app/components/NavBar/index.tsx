@@ -25,7 +25,7 @@ import Link from "next/link";
 import { useScrollColor } from "./hooks/useScrollColor";
 
 const NavBar: FC = () => {
-  const { bgColor } = useScrollColor();
+  const { bgColor, textColor } = useScrollColor();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -48,8 +48,9 @@ const NavBar: FC = () => {
         </Link>
         <div className="flex lg:hidden">
           <button
+            style={{ color: textColor }}
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
