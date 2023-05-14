@@ -22,7 +22,20 @@ export const useScrollColor = () => {
       }
     };
     window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
   }, [isHome]);
+
+  useEffect(() => {
+    if (isHome && window.scrollY < 90) {
+      setBgColor("transparent");
+      setTextColor("white");
+    } else {
+      setBgColor("white");
+      setTextColor("black");
+    }
+  }, [isHome, path]);
 
   return { bgColor, textColor };
 };

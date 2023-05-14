@@ -1,9 +1,8 @@
-import { FC, Fragment, useEffect, useState } from "react";
+import { FC, Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { bestTours, callsToAction, companyInfo } from "./constants";
 
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Image from "next/image";
 import Link from "next/link";
 import { useScrollColor } from "./hooks/useScrollColor";
 
@@ -21,6 +20,7 @@ const DesktopNavBar: FC = () => {
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6">
               Our Best Tours
               <ChevronDownIcon
+                style={{ color: textColor }}
                 className={`h-5 w-5 flex-none text-gray-400 duration-300 ${
                   open && "rotate-180 transform"
                 }`}
@@ -50,11 +50,15 @@ const DesktopNavBar: FC = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <div className="flex-auto">
-                        <a href={tour.href} className="block font-semibold">
+                      <div className="flex-auto text-black">
+                        <Popover.Button
+                          as={Link}
+                          href={tour.href}
+                          className="block font-semibold"
+                        >
                           {tour.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Popover.Button>
                         <p className="mt-1 text-gray-600">{tour.description}</p>
                       </div>
                     </div>
@@ -80,6 +84,7 @@ const DesktopNavBar: FC = () => {
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6">
               About Us
               <ChevronDownIcon
+                style={{ color: textColor }}
                 className={`h-5 w-5 flex-none text-gray-400 duration-300 ${
                   open && "rotate-180 transform"
                 }`}
@@ -100,7 +105,7 @@ const DesktopNavBar: FC = () => {
                   {companyInfo.map((info) => (
                     <div
                       key={info.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                      className="group  relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <info.icon
@@ -108,7 +113,7 @@ const DesktopNavBar: FC = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <div className="flex-auto">
+                      <div className="flex-auto text-black">
                         <Popover.Button
                           as={Link}
                           href={info.href}
