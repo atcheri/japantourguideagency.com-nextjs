@@ -1,7 +1,6 @@
 import {
   AcademicCapIcon,
   ArrowPathIcon,
-  Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   DocumentTextIcon,
@@ -10,53 +9,49 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  EnvelopeIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+import { EnvelopeIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
 export const bestTours = [
   {
     name: "One Day Tokyo",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/",
     icon: ChartPieIcon,
   },
   {
     name: "Mt. Fuji",
     description: "Speak directly to your customers",
-    href: "#",
+    href: "/",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Kawaguchi Ko",
     description: "Your customers’ data will be safe and secure",
-    href: "#",
+    href: "/",
     icon: FingerPrintIcon,
   },
   {
     name: "Hakone",
     description: "Connect with third-party tools",
-    href: "#",
+    href: "/",
     icon: SquaresPlusIcon,
   },
   {
     name: "Nikko",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/",
     icon: ArrowPathIcon,
   },
   {
     name: "Kamakura",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/",
     icon: ArrowPathIcon,
   },
   {
     name: "Yokohama",
     description: "Build strategic funnels that will convert",
-    href: "#",
+    href: "/",
     icon: ArrowPathIcon,
   },
   // {
@@ -96,5 +91,5 @@ export const companyInfo = [
 
 export const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact Us", href: "/contact/tailwindui", icon: EnvelopeIcon },
+  { name: "Contact Us", href: "contact/tailwindui", icon: EnvelopeIcon },
 ];

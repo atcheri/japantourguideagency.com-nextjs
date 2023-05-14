@@ -51,10 +51,14 @@ const DesktopNavBar: FC = () => {
                         />
                       </div>
                       <div className="flex-auto text-black">
-                        <a href={tour.href} className="block font-semibold">
+                        <Popover.Button
+                          as={Link}
+                          href={tour.href}
+                          className="block font-semibold"
+                        >
                           {tour.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Popover.Button>
                         <p className="mt-1 text-gray-600">{tour.description}</p>
                       </div>
                     </div>

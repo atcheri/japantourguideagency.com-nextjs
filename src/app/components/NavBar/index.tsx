@@ -65,10 +65,10 @@ const NavBar: FC = () => {
           </Transition.Child>
           <Transition.Child
             as={Fragment}
-            enter="transform transition ease-in-out duration-500 sm:duration-700"
+            enter="transform transition ease-in-out duration-500"
             enterFrom="translate-x-full"
             enterTo="translate-x-0"
-            leave="transform transition ease-in-out duration-500 sm:duration-700"
+            leave="transform transition ease-in-out duration-500"
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
@@ -113,8 +113,9 @@ const NavBar: FC = () => {
                           <Disclosure.Panel className="mt-2 space-y-2">
                             {[...bestTours, ...callsToAction].map((item) => (
                               <Disclosure.Button
+                                onClick={() => setMobileMenuOpen(false)}
                                 key={item.name}
-                                as="a"
+                                as={Link}
                                 href={item.href}
                                 className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50"
                               >
@@ -152,6 +153,7 @@ const NavBar: FC = () => {
                           <Disclosure.Panel className="mt-2 space-y-2">
                             {[...companyInfo, ...callsToAction].map((item) => (
                               <Disclosure.Button
+                                onClick={() => setMobileMenuOpen(false)}
                                 key={item.name}
                                 as={Link}
                                 href={item.href}
