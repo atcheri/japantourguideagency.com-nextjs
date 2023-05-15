@@ -8,19 +8,48 @@ import { MdOutlineFrontHand } from "react-icons/md";
 import Modal from "./Modal";
 import { sendNewsLetterEmail } from "./actions";
 
+const initialModalState = { title: "", mainText: "", buttonText: "" };
+
 const NewsLetter: FC = () => {
   const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [modalState, setModalState] = useState<{
+    title: string;
+    mainText: string;
+    buttonText: string;
+  }>(initialModalState);
+  const [success, setSuccess] = useState<boolean>(false);
   const inputRef = useRef<any>(null);
 
   const handleNewsLetterSubmit = async (data: FormData) => {
     setLoading(() => true);
     const email = data.get("email") as string;
-    await sendNewsLetterEmail(email);
-    setLoading(() => false);
-    setShowModal(() => true);
-    inputRef.current.value = "";
+    try {
+      await sendNewsLetterEmail(email);
+      setModalState({
+        title: "Successfully subscribed to our NewsLetter",
+        mainText: `Thank you for subscribing to our NewsLetter.
+          You can check your mailbox to see the confirmation.`,
+        buttonText: "Got it, thanks!",
+      });
+      setSuccess(true);
+      inputRef.current.value = "";
+    } catch {
+      setModalState({
+        title: "Suscription to our NewsLetter could not be established.",
+        mainText:
+          "The email address you entered was not found. Please verify and try again.",
+        buttonText: "Retry.",
+      });
+      setSuccess(false);
+    } finally {
+      setLoading(() => false);
+    }
   };
+
+  const showModal =
+    modalState.title !== "" &&
+    modalState.mainText !== "" &&
+    modalState.buttonText !== "";
 
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 my-12">
@@ -82,11 +111,11 @@ const NewsLetter: FC = () => {
 
       <Modal
         modalShow={showModal}
-        modalClose={() => setShowModal(false)}
-        title={"Suscription to our NewsLetter"}
-        mainText={`Thank you for subscribing to our NewsLetter.
-        You can check your mailbox to see the confirmation.`}
-        buttonText={"Got it, thanks!"}
+        modalClose={() => setModalState(initialModalState)}
+        title={modalState.title}
+        mainText={modalState.mainText}
+        buttonText={modalState.buttonText}
+        success={success}
       />
       <div
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
