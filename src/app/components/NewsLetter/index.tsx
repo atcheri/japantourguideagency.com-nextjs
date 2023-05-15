@@ -1,27 +1,58 @@
 "use client";
 
-import { Button, Toast } from "flowbite-react";
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 
 import { BsCalendarRange } from "react-icons/bs";
+import { Button } from "flowbite-react";
 import { MdOutlineFrontHand } from "react-icons/md";
-import { RiMailUnreadLine } from "react-icons/ri";
+import Modal from "./Modal";
 import { sendNewsLetterEmail } from "./actions";
+
+const initialModalState = { title: "", mainText: "", buttonText: "" };
 
 const NewsLetter: FC = () => {
   const [loading, setLoading] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+  const [modalState, setModalState] = useState<{
+    title: string;
+    mainText: string;
+    buttonText: string;
+  }>(initialModalState);
+  const [success, setSuccess] = useState<boolean>(false);
+  const inputRef = useRef<any>(null);
 
   const handleNewsLetterSubmit = async (data: FormData) => {
     setLoading(() => true);
     const email = data.get("email") as string;
-    await sendNewsLetterEmail(email);
-    setLoading(() => false);
-    setShowToast(() => true);
+    try {
+      await sendNewsLetterEmail(email);
+      setModalState({
+        title: "Successfully subscribed to our NewsLetter",
+        mainText: `Thank you for subscribing to our NewsLetter.
+          You can check your mailbox to see the confirmation.`,
+        buttonText: "Got it, thanks!",
+      });
+      setSuccess(true);
+      inputRef.current.value = "";
+    } catch {
+      setModalState({
+        title: "Suscription to our NewsLetter could not be established.",
+        mainText:
+          "The email address you entered was not found. Please verify and try again.",
+        buttonText: "Retry.",
+      });
+      setSuccess(false);
+    } finally {
+      setLoading(() => false);
+    }
   };
 
+  const showModal =
+    modalState.title !== "" &&
+    modalState.mainText !== "" &&
+    modalState.buttonText !== "";
+
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 my-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
@@ -43,6 +74,7 @@ const NewsLetter: FC = () => {
                 id="email-address"
                 name="email"
                 type="email"
+                ref={inputRef}
                 required
                 className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                 placeholder="Enter your email"
@@ -76,19 +108,15 @@ const NewsLetter: FC = () => {
           </dl>
         </div>
       </div>
-      {showToast && (
-        <div className="mt-6 flex justify-center">
-          <Toast>
-            <div className="flex justify-center gap-3 px-4 text-sm font-normal">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-                <RiMailUnreadLine className="h-6 w-6 text-blue-600" />
-              </div>{" "}
-              Thank you for subscribing to your news-letter
-            </div>
-            <Toast.Toggle />
-          </Toast>
-        </div>
-      )}
+
+      <Modal
+        modalShow={showModal}
+        modalClose={() => setModalState(initialModalState)}
+        title={modalState.title}
+        mainText={modalState.mainText}
+        buttonText={modalState.buttonText}
+        success={success}
+      />
       <div
         className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6"
         aria-hidden="true"
@@ -104,5 +132,4 @@ const NewsLetter: FC = () => {
     </div>
   );
 };
-
 export default NewsLetter;
