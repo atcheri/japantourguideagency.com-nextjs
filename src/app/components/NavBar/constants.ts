@@ -24,21 +24,9 @@ export type Item = {
   >;
 };
 
-export type Action = {
-  name: string;
-  href: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
-};
-
 export type NavBarMenuType = {
   title: string;
   items: Item[];
-  actions: Action[];
 };
 
 export const bestTours: Item[] = [
@@ -226,34 +214,24 @@ export const companyInfo: Item[] = [
   },
 ];
 
-export const callsToAction: Action[] = [
-  { name: "Contact Us", href: "contact/tailwindui", icon: EnvelopeIcon },
-  { name: "Watch demo", href: "/", icon: PlayCircleIcon },
-];
-
 export const navBarMenu: {
   menuTitle: string;
   menuItems: Item[];
-  menuActions: Action[];
 }[] = [
   {
     menuTitle: "Our Best Tours",
     menuItems: bestTours,
-    menuActions: [],
   },
   {
     menuTitle: "Recommended Tours",
     menuItems: toursByTheme,
-    menuActions: [],
   },
   {
     menuTitle: "Japanese Resorts",
     menuItems: japaneseResorts,
-    menuActions: [],
   },
   {
     menuTitle: "About Us",
     menuItems: companyInfo,
-    menuActions: callsToAction,
   },
 ];

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { NavBarMenuType } from "./constants";
 import { useScrollColor } from "./hooks/useScrollColor";
 
-const DesktopNavBarMenu = ({ title, items, actions }: NavBarMenuType) => {
+const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
   const { textColor } = useScrollColor();
   return (
     <Popover className="relative">
@@ -57,22 +57,6 @@ const DesktopNavBarMenu = ({ title, items, actions }: NavBarMenuType) => {
                       <p className="mt-1 text-gray-600">{menu.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {actions.map((action) => (
-                  <Popover.Button
-                    key={action.name}
-                    as={Link}
-                    href={action.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm text-black font-semibold leading-6 hover:bg-gray-100"
-                  >
-                    <action.icon
-                      className="h-5 w-5 flex-none text-gray-400"
-                      aria-hidden="true"
-                    />
-                    {action.name}
-                  </Popover.Button>
                 ))}
               </div>
             </Popover.Panel>
