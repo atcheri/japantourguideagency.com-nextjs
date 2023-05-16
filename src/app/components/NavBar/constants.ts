@@ -7,13 +7,12 @@ import {
   FingerPrintIcon,
   InformationCircleIcon,
   SquaresPlusIcon,
-  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { EnvelopeIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
 import React from "react";
 
-type Item = {
+export type Item = {
   name: string;
   href: string;
   description: string;
@@ -25,24 +24,12 @@ type Item = {
   >;
 };
 
-type Action = {
-  name: string;
-  href: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
-};
-
 export type NavBarMenuType = {
   title: string;
   items: Item[];
-  actions: Action[];
 };
 
-export const bestTours = [
+export const bestTours: Item[] = [
   {
     name: "One Day Tokyo",
     href: "/",
@@ -98,7 +85,7 @@ export const bestTours = [
     icon: ArrowPathIcon,
   },
 ];
-export const toursByTheme = [
+export const toursByTheme: Item[] = [
   {
     name: "Samurai and Ninja culture",
     href: "/",
@@ -173,7 +160,7 @@ export const toursByTheme = [
   },
 ];
 
-export const japaneseResorts = [
+export const japaneseResorts: Item[] = [
   {
     name: "Wellness and Eco tours",
     href: "/",
@@ -206,7 +193,7 @@ export const japaneseResorts = [
   },
 ];
 
-export const companyInfo = [
+export const companyInfo: Item[] = [
   {
     name: "Our Company Information",
     href: "/company-info",
@@ -227,30 +214,24 @@ export const companyInfo = [
   },
 ];
 
-export const callsToAction = [
-  { name: "Contact Us", href: "contact/tailwindui", icon: EnvelopeIcon },
-  { name: "Watch demo", href: "/", icon: PlayCircleIcon },
-];
-
-export const navBarMenu = [
+export const navBarMenu: {
+  menuTitle: string;
+  menuItems: Item[];
+}[] = [
   {
     menuTitle: "Our Best Tours",
     menuItems: bestTours,
-    menuActions: [],
   },
   {
     menuTitle: "Recommended Tours",
     menuItems: toursByTheme,
-    menuActions: [],
   },
   {
     menuTitle: "Japanese Resorts",
     menuItems: japaneseResorts,
-    menuActions: [],
   },
   {
     menuTitle: "About Us",
     menuItems: companyInfo,
-    menuActions: callsToAction,
   },
 ];
