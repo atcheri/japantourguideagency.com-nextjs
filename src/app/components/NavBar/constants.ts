@@ -8,8 +8,8 @@ import {
   InformationCircleIcon,
   SquaresPlusIcon,
 } from "@heroicons/react/24/outline";
-import { EnvelopeIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 
+import { ROUTES } from "@/constants/routes";
 import React from "react";
 
 export type Item = {
@@ -163,13 +163,13 @@ export const toursByTheme: Item[] = [
 export const japaneseResorts: Item[] = [
   {
     name: "Wellness and Eco tours",
-    href: "/",
+    href: ROUTES.ARTICLES_WELLNESS.path,
     description: "Get a better understanding of your traffic",
     icon: ChartPieIcon,
   },
   {
     name: "Ski and snow resorts",
-    href: "/",
+    href: ROUTES.ARTICLES_SKI_RESORTS.path,
     description: "Speak directly to your customers",
     icon: CursorArrowRaysIcon,
   },
