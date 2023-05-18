@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="flex items-center justify-center h-screen bg-fixed bg-center bg-cover bg-hero-pattern">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
       <div className="flex flex-col gap-3 text-white z-[2]">
-        <h2 className="text-2xl font-bold md:text-5xl">{heading}</h2>
+        <h1 className="text-2xl font-bold md:text-5xl">{heading}</h1>
         <p className="text-xl md:text-2xl font-semibold">{message}</p>
         <Link href={STORE_ROUTES.STORE.path}>
           <button className="px-8 py-2 border">Here</button>
