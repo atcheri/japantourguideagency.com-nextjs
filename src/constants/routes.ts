@@ -12,6 +12,13 @@ type PathType = {
   path: string;
 };
 
+export const STORE_ROUTES: Record<string, PathType> = Object.freeze({
+  STORE: {
+    name: "STORE",
+    path: `https://store.japantourguideagency.com`,
+  },
+});
+
 export const ROUTES: Record<string, PathType> = Object.freeze({
   HOME: {
     name: "Home",
@@ -37,8 +44,12 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
     name: "Policy",
     path: "/policy",
   },
-  STORE: {
-    name: "STORE",
-    path: `https://store.japantourguideagency.com`,
+  ARTICLES_SKI_RESORTS: {
+    name: "Ski And Snow Resorts",
+    path: "/articles/ski-and-snow-resorts",
+  },
+  ARTICLES_WELLNESS: {
+    name: "Wellness And Eco-Tours In Japan",
+    path: "/articles/wellness-and-eco-tours-in-japan",
   },
 });

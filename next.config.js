@@ -20,6 +20,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "store.japantourguideagency.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   experimental: {
