@@ -67,6 +67,9 @@ dependencies:
   react-responsive-carousel:
     specifier: ^3.2.23
     version: 3.2.23
+  tailwind-gradient-mask-image:
+    specifier: ^1.0.0
+    version: 1.0.0
   tailwindcss:
     specifier: 3.3.2
     version: 3.3.2
@@ -4289,6 +4292,10 @@ packages:
 
   /tabbable@6.1.2:
     resolution: {integrity: sha512-qCN98uP7i9z0fIS4amQ5zbGBOq+OSigYeGvPy7NDk8Y9yncqDZ9pRPgfsc2PJIVM9RrJj7GIfuRgmjoUU9zTHQ==}
+    dev: false
+
+  /tailwind-gradient-mask-image@1.0.0:
+    resolution: {integrity: sha512-eZJhn6wHZ0Irfpq5sm0ErewH6IC82gqjfVsDQ7MYrJcfTgepOoTI6EryLppNPoZds4EeD6/H0WrysT8HE90H5g==}
     dev: false
 
   /tailwindcss@3.2.7(postcss@8.4.21):
