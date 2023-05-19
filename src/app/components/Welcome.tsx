@@ -5,6 +5,9 @@ import { FC, useState } from "react";
 import { Button } from "flowbite-react";
 import Image from "next/image";
 
+const IMAGE_WIDTH = 284;
+const IMAGE_HEIGHT = 426;
+
 const Welcome: FC<{ photos: string[] }> = ({
   photos: [photoOne, photoTwo],
 }) => {
@@ -19,18 +22,18 @@ const Welcome: FC<{ photos: string[] }> = ({
       <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div className="grid grid-cols-2 gap-4 mt-8">
           <Image
-            className="w-full rounded-sm max-h-[822px]"
+            className="w-full rounded-sm max-h-[426px] md:h-[426px]"
             src={photoOne}
             alt="Welcome to Japan"
-            width={582}
-            height={822}
+            width={IMAGE_WIDTH}
+            height={IMAGE_HEIGHT}
           />
           <Image
-            className="mt-4 w-full lg:mt-10 rounded-sm max-h-[822px]"
+            className="mt-4 w-full lg:mt-10 rounded-sm max-h-[426px] md:h-[426px]"
             src={photoTwo}
             alt="Discover the beauty of Japan"
-            width={582}
-            height={822}
+            width={IMAGE_WIDTH}
+            height={IMAGE_HEIGHT}
           />
         </div>
         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400 rounded-">

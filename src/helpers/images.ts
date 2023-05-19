@@ -8,7 +8,6 @@ const photoLinks = [
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/tomas-malik-N9Fl32CFMfU-unsplash.jpg",
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/syuhei-inoue-kaoHI0iHJPM-unsplash.jpg",
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/sophie-keen-iYjerlfwBhA-unsplash.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/sigmund-65u8D-iNh0M-unsplash.jpg",
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/redd-f-Lm5rkxzgiFQ-unsplash.jpg",
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/josh-soto-M76ZhVCMtYw-unsplash.jpg",
   "https://store.japantourguideagency.com/wp-content/uploads/2022/04/fahrul-azmi-chTe2CU58L0-unsplash.jpg",
