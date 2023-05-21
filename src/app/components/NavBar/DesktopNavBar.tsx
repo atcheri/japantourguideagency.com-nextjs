@@ -21,7 +21,12 @@ const DesktopNavBar: FC = () => {
           items={menu.menuItems}
         />
       ))}
-      <Link href={ROUTES.CONTACT.path}>Contact Us</Link>
+      <Link
+        href={ROUTES.CONTACT.path}
+        className="flex items-center font-semibold"
+      >
+        Contact Us
+      </Link>
     </Popover.Group>
   );
 };

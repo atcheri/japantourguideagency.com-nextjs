@@ -52,7 +52,7 @@ const NewsLetter: FC = () => {
     modalState.buttonText !== "";
 
   return (
-    <section className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 my-12">
+    <section className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
@@ -88,7 +88,7 @@ const NewsLetter: FC = () => {
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
             <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+              <div className="rounded-md bg-white/5 p-4 ring-1 ring-white/10">
                 <BsCalendarRange className="h-6 w-6 text-white" />
               </div>
               <dt className="mt-4 font-semibold text-white">Rare emails</dt>
@@ -98,7 +98,7 @@ const NewsLetter: FC = () => {
               </dd>
             </div>
             <div className="flex flex-col items-start">
-              <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+              <div className="rounded-md bg-white/5 p-4 ring-1 ring-white/10">
                 <MdOutlineFrontHand className="h-6 w-6 text-white" />
               </div>
               <dt className="mt-4 font-semibold text-white">No spam</dt>
