@@ -55,7 +55,8 @@ const Features = () => {
             Our strengths
           </p>
           <h2 className="text-3xl font-bold mb-6">
-            Why discover <u className="text-blue-600">Japan </u>with us?
+            Why discover <span className="underline text-red-500">Japan </span>
+            with us?
           </h2>
           <p className="text-gray-500 mb-12">
             Embark on an unforgettable journey through Japan with our tailored
