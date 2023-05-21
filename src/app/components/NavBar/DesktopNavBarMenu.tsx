@@ -12,7 +12,7 @@ const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
     <Popover className="relative">
       {({ open }) => (
         <>
-          <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6">
+          <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6">
             {title}
             <ChevronDownIcon
               style={{ color: textColor }}
