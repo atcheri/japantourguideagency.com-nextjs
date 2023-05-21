@@ -60,8 +60,10 @@ const NewsLetter: FC = () => {
               Subscribe to our newsletter.
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore.
+              Stay up-to-date with the latest travel insights, exclusive offers,
+              and insider tips for an unforgettable journey through Japan.
+              Subscribe to our newsletter and embark on a personalized tour
+              experience like no other.
             </p>
             <form
               action={handleNewsLetterSubmit}
@@ -80,7 +82,7 @@ const NewsLetter: FC = () => {
                 placeholder="Enter your email"
               />
               <Button type="submit" disabled={loading} isProcessing={loading}>
-                Subscribe
+                Join
               </Button>
             </form>
           </div>
@@ -91,8 +93,8 @@ const NewsLetter: FC = () => {
               </div>
               <dt className="mt-4 font-semibold text-white">Rare emails</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+                Expect our newsletters to be delivered sparingly, ensuring each
+                message is valuable and packed with useful information.
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -101,8 +103,9 @@ const NewsLetter: FC = () => {
               </div>
               <dt className="mt-4 font-semibold text-white">No spam</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+                Rest assured, we prioritize your privacy and promise to never
+                inundate your inbox with unsolicited emails or share your
+                personal information with third parties.
               </dd>
             </div>
           </dl>
