@@ -79,7 +79,7 @@ const Features = () => {
                     </div>
                   </div>
                   <div className="grow ml-4">
-                    <p className="font-bold mb-1">{title}</p>
+                    <h3 className="font-bold mb-1">{title}</h3>
                     <p className="text-gray-500">{text}</p>
                   </div>
                 </div>
