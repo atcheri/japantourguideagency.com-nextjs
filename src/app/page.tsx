@@ -1,4 +1,3 @@
-import Carousel from "./components/Carousel";
 import Features from "./components/Features";
 import Hero from "./components/Hero";
 import NewsLetter from "./components/NewsLetter";
@@ -18,7 +17,6 @@ export default function Home() {
       <Features />
       <Products />
       <SwiperSlider />
-      <Carousel />
       <Testimonials />
       <NewsLetter />
     </>

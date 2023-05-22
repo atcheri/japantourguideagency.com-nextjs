@@ -87,8 +87,8 @@ export const products = [
 const Products: FC = () => {
   return (
     <>
-      <div className="my-8 flex max-h-screen items-center">
-        <div className="px-4 gap-2 w-screen grid grid-flow-col auto-cols-[20rem] snap-x snap-mandatory overflow-x-auto">
+      <div className="container mx-auto">
+        <div className="grid grid-flow-col auto-cols-[20rem] snap-x snap-mandatory overflow-x-auto">
           {products.map(({ id, imageSrc, name, text, imageAlt }) => (
             <ProductCard
               key={id}
