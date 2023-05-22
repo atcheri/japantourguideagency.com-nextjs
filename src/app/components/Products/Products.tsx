@@ -1,7 +1,7 @@
 import { FC } from "react";
 import ProductCard from "./ProductCard";
 
-const products = [
+export const products = [
   {
     id: 1,
     name: "Mount Fuji",
@@ -87,8 +87,8 @@ const products = [
 const Products: FC = () => {
   return (
     <>
-      <div className="container mx-auto my-8 flex max-h-screen items-center">
-        <div className="gap-10 w-screen grid grid-flow-col auto-cols-[50%] snap-x snap-mandatory overflow-x-auto">
+      <div className="my-8 flex max-h-screen items-center">
+        <div className="px-4 gap-2 w-screen grid grid-flow-col auto-cols-[20rem] snap-x snap-mandatory overflow-x-auto">
           {products.map(({ id, imageSrc, name, text, imageAlt }) => (
             <ProductCard
               key={id}
