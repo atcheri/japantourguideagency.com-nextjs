@@ -86,13 +86,8 @@ export const japaneseResorts: MenuItem[] = [
     description: "Discover the beauty of Japan in winter",
   },
   {
-    name: "Beach resorts",
-    href: "/",
-    description: "Escape to incredible beaches",
-  },
-  {
     name: "Golf resorts",
-    href: "/",
+    href: ROUTES.ARTICLES_GOLF_RESORTS.path,
     description: "TO BE DEFINED",
   },
 ];
@@ -107,11 +102,6 @@ export const companyInfo: MenuItem[] = [
     name: "Our Service Policy",
     href: "/policy",
     description: "information about our terms and policy",
-  },
-  {
-    name: "Our Partners",
-    href: "/partners",
-    description: "They work with Us",
   },
 ];
 
