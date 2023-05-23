@@ -1,230 +1,67 @@
-import {
-  AcademicCapIcon,
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  DocumentTextIcon,
-  FingerPrintIcon,
-  InformationCircleIcon,
-  SquaresPlusIcon,
-} from "@heroicons/react/24/outline";
-
 import { ROUTES } from "@/constants/routes";
-import React from "react";
 
-export type Item = {
+export type MenuItem = {
   name: string;
   href: string;
   description: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
 };
 
 export type NavBarMenuType = {
   title: string;
-  items: Item[];
+  items: MenuItem[];
 };
 
-export const bestTours: Item[] = [
+export const bestTours: MenuItem[] = [
   {
     name: "Tokyo",
     href: "https://store.japantourguideagency.com/st_tour/tokyo/",
     description: "Visit the best place in Tokyo in One Day",
-    icon: ChartPieIcon,
   },
   {
     name: "Mt. Fuji",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
     description: "Mount Fuji Private Tour",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Kawaguchi Ko",
-    href: "/",
-    description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Hakone",
-    href: "/",
-    description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Nikko",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Kamakura",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Yokohama",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Katsushika Hokusai",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Utagawa Hiroshige",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-];
-export const toursByTheme: Item[] = [
-  {
-    name: "Samurai and Ninja culture",
-    href: "/",
-    description: "Get a better understanding of your traffic",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Sustainable tourism",
-    href: "/",
-    description: "Speak directly to your customers",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Japanese cuisine",
-    href: "/",
-    description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Japanese fruits",
-    href: "/",
-    description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Sake and Japanese beverag",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Japanese traditional culture",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Museums and art",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Architecture",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Night life",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Festivals",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Sumo",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Bike tour",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
 ];
 
-export const japaneseResorts: Item[] = [
+export const japaneseResorts: MenuItem[] = [
   {
-    name: "Wellness and Eco tours",
+    name: "Wellness and Eco Tourism",
     href: ROUTES.ARTICLES_WELLNESS.path,
-    description: "Get a better understanding of your traffic",
-    icon: ChartPieIcon,
+    description: "Sustainable and well-being in Japan",
   },
   {
     name: "Ski and snow resorts",
     href: ROUTES.ARTICLES_SKI_RESORTS.path,
-    description: "Speak directly to your customers",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Beach resorts",
-    href: "/",
-    description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
+    description: "Discover the beauty of Japan in winter",
   },
   {
     name: "Golf resorts",
-    href: "/",
-    description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Cruise boat",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
+    href: ROUTES.ARTICLES_GOLF_RESORTS.path,
+    description: "TO BE DEFINED",
   },
 ];
 
-export const companyInfo: Item[] = [
+export const companyInfo: MenuItem[] = [
   {
     name: "Our Company Information",
     href: "/company-info",
     description: "information about our company",
-    icon: InformationCircleIcon,
   },
   {
     name: "Our Service Policy",
     href: "/policy",
     description: "information about our terms and policy",
-    icon: DocumentTextIcon,
-  },
-  {
-    name: "Our Partners",
-    href: "/partners",
-    description: "They work with Us",
-    icon: AcademicCapIcon,
   },
 ];
 
 export const navBarMenu: {
   menuTitle: string;
-  menuItems: Item[];
+  menuItems: MenuItem[];
 }[] = [
   {
-    menuTitle: "Our Best Tours",
-    menuItems: bestTours,
-  },
-  {
     menuTitle: "Recommended Tours",
-    menuItems: toursByTheme,
+    menuItems: bestTours,
   },
   {
     menuTitle: "Japanese Resorts",

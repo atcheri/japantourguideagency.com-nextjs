@@ -1,12 +1,13 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Disclosure } from "@headlessui/react";
 import { FC } from "react";
-import { Item } from "./constants";
 import Link from "next/link";
+import { MenuItem } from "./constants";
+import { RxDot } from "react-icons/rx";
 
 type MobileNavBarMenuProps = {
   title: string;
-  items: Item[];
+  items: MenuItem[];
   mobileMenuClose: () => void;
 };
 
@@ -29,13 +30,13 @@ const MobileNavBarMenu: FC<MobileNavBarMenuProps> = ({
             />
           </Disclosure.Button>
           <Disclosure.Panel className="mt-2 space-y-2">
-            {items.map(({ name, description, href, icon: Icon }) => (
+            {items.map(({ name, href }) => (
               <div
                 key={name}
                 className="group relative flex items-center gap-x-4 rounded-lg pl-4 text-sm leading-6 hover:bg-gray-50"
               >
                 <div className="flex items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                  <Icon
+                  <RxDot
                     className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                     aria-hidden="true"
                   />
