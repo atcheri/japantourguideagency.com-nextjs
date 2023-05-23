@@ -62,13 +62,13 @@ const Testimonials = () => {
           experiences exploring Japan with us.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-x-8 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
         {feedbacks.map(({ image, name, stars, content, title }, id) => (
           <div
             key={`feedback-${id}`}
-            className="py-4 px-8 bg-white shadow-md rounded-lg"
+            className="p-6 bg-white shadow-md rounded-lg"
           >
-            <div className="flex justify-center md:justify-end -mt-12">
+            <div className="flex justify-end sm:-mt-12">
               <Image
                 className="w-16 h-16 object-cover rounded-full border-2 border-blue-500"
                 src={image}

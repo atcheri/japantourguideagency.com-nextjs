@@ -24,7 +24,7 @@ const TestimonialContent: FC<TestimonialContentProps> = ({
         {content.slice(0, 144)} ... <br />
         <span className="italic">read more</span>
       </div>
-      <Modal show={show} onClose={toggleShow}>
+      <Modal show={show} onClose={toggleShow} dismissible={true}>
         <Modal.Header>{title}</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
