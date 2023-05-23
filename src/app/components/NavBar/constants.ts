@@ -29,62 +29,6 @@ export type NavBarMenuType = {
   items: Item[];
 };
 
-export const bestTours: Item[] = [
-  {
-    name: "Tokyo",
-    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
-    description: "Visit the best place in Tokyo in One Day",
-    icon: ChartPieIcon,
-  },
-  {
-    name: "Mt. Fuji",
-    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    description: "Mount Fuji Private Tour",
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: "Kawaguchi Ko",
-    href: "/",
-    description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
-  },
-  {
-    name: "Hakone",
-    href: "/",
-    description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Nikko",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Kamakura",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Yokohama",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Katsushika Hokusai",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Utagawa Hiroshige",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
-  },
-];
 export const toursByTheme: Item[] = [
   {
     name: "Samurai and Ninja culture",
@@ -218,10 +162,6 @@ export const navBarMenu: {
   menuTitle: string;
   menuItems: Item[];
 }[] = [
-  {
-    menuTitle: "Our Best Tours",
-    menuItems: bestTours,
-  },
   {
     menuTitle: "Recommended Tours",
     menuItems: toursByTheme,
