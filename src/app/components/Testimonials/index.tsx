@@ -77,7 +77,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="container mx-auto my-16 sm:my-24 lg:my-32">
+    <section className="container mx-auto my-16 sm:my-24 lg:my-32 px-3">
       <div className="flex flex-col gap-2 mb-16">
         <h2 className="text-3xl font-semibold">
           Hear from Our Satisfied Travelers

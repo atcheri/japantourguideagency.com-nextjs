@@ -1,19 +1,21 @@
 import { FC } from "react";
 import { Footer } from "flowbite-react";
-import Link from "next/link";
 
 const SiteFooter: FC = () => {
   return (
     <Footer container={true}>
-      <div className="w-full text-center">
-        <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-center">
           <Footer.Brand
             href="/"
             src="https://flowbite.com/docs/images/logo.svg"
             alt="Japan Tour Guide Agency - Logo"
-            name="JTGA"
+            // name="JTGA"
           />
-          <Footer.LinkGroup className="flex justify-between">
+
+          <Footer.LinkGroup className="">
+            {/* 
+            <Footer.LinkGroup className="flex justify-between">
             <Footer.Link href="/about" as={Link}>
               About
             </Footer.Link>
@@ -28,11 +30,15 @@ const SiteFooter: FC = () => {
             </Footer.Link>
             <Footer.Link href="/contact" as={Link}>
               Contact
-            </Footer.Link>
+            </Footer.Link> */}
           </Footer.LinkGroup>
         </div>
         <Footer.Divider />
-        <Footer.Copyright href="/" by="JTGA" year={new Date().getFullYear()} />
+        <Footer.Copyright
+          href="/"
+          by="All rights reserved"
+          year={new Date().getFullYear()}
+        />
       </div>
     </Footer>
   );
