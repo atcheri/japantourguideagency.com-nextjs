@@ -52,7 +52,7 @@ const NewsLetter: FC = () => {
     modalState.buttonText !== "";
 
   return (
-    <section className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 px-3">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
