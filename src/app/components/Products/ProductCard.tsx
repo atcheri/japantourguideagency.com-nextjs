@@ -9,10 +9,10 @@ type ProductCardProps = {
 
 const ProductCard = ({ image, name, text, alt }: ProductCardProps) => {
   return (
-    <div className="mx-auto flex-none rounded-sm snap-center snap-always group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-lg hover:shadow-black/30">
+    <div className="rounded-md group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-lg hover:shadow-black/30">
       <div className="h-full w-full">
         <img
-          className="h-96 w-72 object-cover transition-transform duration-500 group-hover:scale-[120%]"
+          className="h-96 min-w-full object-cover transition-transform duration-500 group-hover:scale-[120%]"
           src={image}
           alt={alt}
         />
