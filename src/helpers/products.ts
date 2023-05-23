@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     name: "Mount Fuji",
-    href: "#",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2022/04/tomas-malik-N9Fl32CFMfU-unsplash.jpg",
@@ -11,7 +11,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Tokyo Tower",
+    name: "Tokyo",
     href: "#",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
@@ -42,11 +42,11 @@ export const products = [
 
   {
     id: 5,
-    name: "Mount Fuji",
+    name: "Nikko",
     href: "#",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/svetlana-gumerova-PMkQ7WVWqr0-unsplash.jpg",
+      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/chantal-lim-TUsye76z6Fg-unsplash.jpg",
     imageAlt:
       "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
   },

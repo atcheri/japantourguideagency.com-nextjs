@@ -31,15 +31,15 @@ export type NavBarMenuType = {
 
 export const bestTours: Item[] = [
   {
-    name: "One Day Tokyo",
-    href: "/",
-    description: "Get a better understanding of your traffic",
+    name: "Tokyo",
+    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
+    description: "Visit the best place in Tokyo in One Day",
     icon: ChartPieIcon,
   },
   {
     name: "Mt. Fuji",
-    href: "/",
-    description: "Speak directly to your customers",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
+    description: "Mount Fuji Private Tour",
     icon: CursorArrowRaysIcon,
   },
   {

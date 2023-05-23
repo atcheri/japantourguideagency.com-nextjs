@@ -13,7 +13,13 @@ register();
 
 const SwiperSlider = () => {
   return (
-    <section className="sm:text-lg container mx-auto">
+    <section className="container mx-auto my-16 sm:my-24 lg:my-32 px-3 sm:text-lg">
+      <div className="flex flex-col gap-2 mb-16">
+        <h2 className="text-3xl font-semibold">Our Popular Tours</h2>
+        <p className="text-xl text-slate-600">
+          The best destinations to discover Japan.
+        </p>
+      </div>
       <Swiper
         modules={[Pagination, EffectCoverflow]}
         centeredSlides={true}
@@ -39,14 +45,15 @@ const SwiperSlider = () => {
             slidesPerView: 4,
           },
         }}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: true }}
       >
-        {products.map(({ id, imageSrc, name, text, imageAlt }) => (
+        {products.map(({ id, imageSrc, name, href, text, imageAlt }) => (
           <SwiperSlide key={id}>
             <ProductCard
               image={imageSrc}
               name={name}
               text={text}
+              href={href}
               alt={imageAlt}
             />
           </SwiperSlide>
