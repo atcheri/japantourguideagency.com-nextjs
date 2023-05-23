@@ -13,7 +13,7 @@ const Layout: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <>
       <NavBar />
-      <main className={`min-h-screen mx-auto ${!isHome && "max-md:mt-24"}`}>
+      <main className={`min-h-screen mx-auto ${!isHome && "mt-24"}`}>
         {children}
       </main>
       <SiteFooter />
