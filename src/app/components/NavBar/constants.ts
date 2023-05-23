@@ -1,166 +1,123 @@
-import {
-  AcademicCapIcon,
-  ArrowPathIcon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  DocumentTextIcon,
-  FingerPrintIcon,
-  InformationCircleIcon,
-  SquaresPlusIcon,
-} from "@heroicons/react/24/outline";
-
 import { ROUTES } from "@/constants/routes";
-import React from "react";
 
-export type Item = {
+export type MenuItem = {
   name: string;
   href: string;
   description: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
 };
 
 export type NavBarMenuType = {
   title: string;
-  items: Item[];
+  items: MenuItem[];
 };
 
-export const toursByTheme: Item[] = [
+export const toursByTheme: MenuItem[] = [
   {
     name: "Samurai and Ninja culture",
     href: "/",
     description: "Get a better understanding of your traffic",
-    icon: ChartPieIcon,
   },
   {
     name: "Sustainable tourism",
     href: "/",
     description: "Speak directly to your customers",
-    icon: CursorArrowRaysIcon,
   },
   {
     name: "Japanese cuisine",
     href: "/",
     description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
   },
   {
     name: "Japanese fruits",
     href: "/",
     description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
   },
   {
     name: "Sake and Japanese beverag",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Japanese traditional culture",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Museums and art",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Architecture",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Night life",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Festivals",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Sumo",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
   {
     name: "Bike tour",
     href: "/",
     description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
   },
 ];
 
-export const japaneseResorts: Item[] = [
+export const japaneseResorts: MenuItem[] = [
   {
-    name: "Wellness and Eco tours",
+    name: "Wellness and Eco Tourism",
     href: ROUTES.ARTICLES_WELLNESS.path,
-    description: "Get a better understanding of your traffic",
-    icon: ChartPieIcon,
+    description: "Sustainable and well-being in Japan",
   },
   {
     name: "Ski and snow resorts",
     href: ROUTES.ARTICLES_SKI_RESORTS.path,
-    description: "Speak directly to your customers",
-    icon: CursorArrowRaysIcon,
+    description: "Discover the beauty of Japan in winter",
   },
   {
     name: "Beach resorts",
     href: "/",
-    description: "Your customers’ data will be safe and secure",
-    icon: FingerPrintIcon,
+    description: "Escape to incredible beaches",
   },
   {
     name: "Golf resorts",
     href: "/",
-    description: "Connect with third-party tools",
-    icon: SquaresPlusIcon,
-  },
-  {
-    name: "Cruise boat",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-    icon: ArrowPathIcon,
+    description: "TO BE DEFINED",
   },
 ];
 
-export const companyInfo: Item[] = [
+export const companyInfo: MenuItem[] = [
   {
     name: "Our Company Information",
     href: "/company-info",
     description: "information about our company",
-    icon: InformationCircleIcon,
   },
   {
     name: "Our Service Policy",
     href: "/policy",
     description: "information about our terms and policy",
-    icon: DocumentTextIcon,
   },
   {
     name: "Our Partners",
     href: "/partners",
     description: "They work with Us",
-    icon: AcademicCapIcon,
   },
 ];
 
 export const navBarMenu: {
   menuTitle: string;
-  menuItems: Item[];
+  menuItems: MenuItem[];
 }[] = [
   {
     menuTitle: "Recommended Tours",

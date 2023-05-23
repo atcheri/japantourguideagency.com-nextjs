@@ -1,12 +1,12 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Disclosure } from "@headlessui/react";
 import { FC } from "react";
-import { Item } from "./constants";
 import Link from "next/link";
+import { MenuItem } from "./constants";
 
 type MobileNavBarMenuProps = {
   title: string;
-  items: Item[];
+  items: MenuItem[];
   mobileMenuClose: () => void;
 };
 
