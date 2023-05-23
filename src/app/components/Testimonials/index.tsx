@@ -1,7 +1,11 @@
+"use client";
+
+import { Button, Modal } from "flowbite-react";
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiStarFill } from "react-icons/ri";
 
 import Image from "next/image";
 import TestimonialContent from "./TestimonialContent";
+import { useState } from "react";
 
 type FeedbackType = {
   content: string;
@@ -50,7 +54,28 @@ const feedbacks: FeedbackType[] = [
   },
 ];
 
+const initialModal = {
+  show: false,
+  title: "",
+  content: "",
+};
+
 const Testimonials = () => {
+  const [modalContent, setModalContent] = useState<{
+    show: boolean;
+    title: string;
+    content: string;
+  }>(initialModal);
+
+  const toggleShow = (title: string = "", content: string = "") => {
+    if (modalContent.show) {
+      setModalContent(initialModal);
+      return;
+    }
+
+    setModalContent({ show: true, content, title });
+  };
+
   return (
     <section className="container mx-auto my-16 sm:my-24 lg:my-32">
       <div className="flex flex-col gap-2 mb-16">
@@ -66,7 +91,8 @@ const Testimonials = () => {
         {feedbacks.map(({ image, name, stars, content, title }, id) => (
           <div
             key={`feedback-${id}`}
-            className="p-6 bg-white shadow-md rounded-lg"
+            className="p-6 bg-white shadow-md rounded-lg cursor-pointer"
+            onClick={() => toggleShow(title, content)}
           >
             <div className="flex justify-end sm:-mt-12">
               <Image
@@ -80,19 +106,19 @@ const Testimonials = () => {
             <div className="flex flex-col gap-2">
               <h3 className="text-slate-600 text-2xl font-semibold">{title}</h3>
               <div className="flex">
-                {[...Array(stars)].map((s) => (
+                {[...Array(stars)].map((s, i) => (
                   <RiStarFill
-                    key={`${name}-star-${s}`}
+                    key={`${name}-stars-${i}`}
                     className="h-6 w-6 fill-yellow-200"
                   />
                 ))}
               </div>
               <p className="mt-2 text-slate-500">
                 <RiDoubleQuotesL className="h-10 w-10 relative -left-5 opacity-40" />
-                <TestimonialContent title={title} content={content} />
-                <div className="flex justify-end">
+                <TestimonialContent content={content} />
+                <span className="flex justify-end">
                   <RiDoubleQuotesR className="h-10 w-10 relative -top-5 -right-5 opacity-40" />
-                </div>
+                </span>
               </p>
               <div className="flex justify-end mt-4">
                 <span className="text-xl font-medium italic text-blue-600">
@@ -103,6 +129,25 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+      <Modal
+        show={modalContent.show}
+        onClose={() => toggleShow()}
+        dismissible={true}
+      >
+        <Modal.Header>{modalContent.title}</Modal.Header>
+        <Modal.Body>
+          <div className="space-y-6">
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              {modalContent.content}
+            </p>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button color="gray" onClick={() => toggleShow()}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </section>
   );
 };
