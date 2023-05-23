@@ -4,7 +4,7 @@ const message = "And experience unforgettable moments of life";
 const Hero = () => {
   return (
     <section className="bg-fixed bg-center bg-cover bg-hero-pattern">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-3 max-md:-my-[29px]">
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
         <div className="flex items-center h-screen">
           <div className="flex flex-col max-w-xl gap-5 z-[2] text-white">
