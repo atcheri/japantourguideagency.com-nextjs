@@ -11,66 +11,16 @@ export type NavBarMenuType = {
   items: MenuItem[];
 };
 
-export const toursByTheme: MenuItem[] = [
+export const bestTours: MenuItem[] = [
   {
-    name: "Samurai and Ninja culture",
-    href: "/",
-    description: "Get a better understanding of your traffic",
+    name: "Tokyo",
+    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
+    description: "Visit the best place in Tokyo in One Day",
   },
   {
-    name: "Sustainable tourism",
-    href: "/",
-    description: "Speak directly to your customers",
-  },
-  {
-    name: "Japanese cuisine",
-    href: "/",
-    description: "Your customers’ data will be safe and secure",
-  },
-  {
-    name: "Japanese fruits",
-    href: "/",
-    description: "Connect with third-party tools",
-  },
-  {
-    name: "Sake and Japanese beverag",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Japanese traditional culture",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Museums and art",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Architecture",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Night life",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Festivals",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Sumo",
-    href: "/",
-    description: "Build strategic funnels that will convert",
-  },
-  {
-    name: "Bike tour",
-    href: "/",
-    description: "Build strategic funnels that will convert",
+    name: "Mt. Fuji",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
+    description: "Mount Fuji Private Tour",
   },
 ];
 
@@ -111,7 +61,7 @@ export const navBarMenu: {
 }[] = [
   {
     menuTitle: "Recommended Tours",
-    menuItems: toursByTheme,
+    menuItems: bestTours,
   },
   {
     menuTitle: "Japanese Resorts",
