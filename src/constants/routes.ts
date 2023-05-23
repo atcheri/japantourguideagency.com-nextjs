@@ -30,7 +30,7 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
   },
   CONTACT: {
     name: "Contact",
-    path: "/contact/tailwindui",
+    path: "/contact",
   },
   FAQ: {
     name: "FAQ",
