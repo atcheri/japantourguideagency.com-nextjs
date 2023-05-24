@@ -13,14 +13,34 @@ export type NavBarMenuType = {
 
 export const bestTours: MenuItem[] = [
   {
+    name: "Mt. Fuji",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
+    description: "Private Tour to Mount Fuji",
+  },
+  {
+    name: "Mt. Fuji Hakone",
+    href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
+    description: "Lorem Oposum",
+  },
+  {
+    name: "Mt. Fuji Gotemba Outlet",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
+    description: "Lorem Oposum",
+  },
+  {
     name: "Tokyo",
     href: "https://store.japantourguideagency.com/st_tour/tokyo/",
     description: "Visit the best place in Tokyo in One Day",
   },
   {
-    name: "Mt. Fuji",
-    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    description: "Mount Fuji Private Tour",
+    name: "Kamakura, Enoshima, Yokohama",
+    href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
+    description: "Lorem Oposum",
+  },
+  {
+    name: "Nikko, Toshogu, Edo Wonderland",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
+    description: "Lorem Oposum",
   },
 ];
 

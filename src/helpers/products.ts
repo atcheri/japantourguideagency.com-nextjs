@@ -5,79 +5,62 @@ export const products = [
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/tomas-malik-N9Fl32CFMfU-unsplash.jpg",
-    imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200423_060418-scaled.jpg",
+    imageAlt: "Mount Fuji",
   },
   {
     id: 2,
-    name: "Tokyo",
-    href: "#",
+    name: "Tokyo Day Trip",
+    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/jezael-melgoza-7H77FWkK_x4-unsplash.jpg",
-    imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/PXL_20230509_053636072-scaled.jpg",
+    imageAlt: "Tokyo Day Trip",
   },
   {
     id: 3,
-    name: "Chureito Pagoda",
-    href: "#",
+    name: "Mt Fuji and Gotemba Outlet",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/svetlana-gumerova-PMkQ7WVWqr0-unsplash.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/6c.jpg",
+    imageAlt: "Mt Fuji and Gotemba Outlet",
   },
   {
     id: 4,
-    name: "Fuu Jin Tao",
-    href: "#",
+    name: "Mt. Fuji and Hakone",
+    href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/sei-0L0_WPZc5Mc-unsplash.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200218_102340-scaled.jpg",
+    imageAlt: "Mt. Fuji and Hakone",
   },
 
   {
     id: 5,
-    name: "Nikko",
-    href: "#",
+    name: "Kamakura, Enoshima",
+    href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/chantal-lim-TUsye76z6Fg-unsplash.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_0147-scaled.jpg",
+    imageAlt: "Kamakura, Enoshima",
   },
   {
     id: 6,
-    name: "Kyoto",
-    href: "#",
+    name: "Nikko, Toshogu, Edo Wonderland",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/andre-benz-cATZ2eHu5ys-unsplash.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_9672.jpg",
+    imageAlt: "Nikko, Toshogu, Edo Wonderland",
   },
   {
     id: 7,
-    name: "Kamakura",
+    name: "Golf Resort",
     href: "#",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2022/04/yohei-shimomae-VkYbDqseTy4-unsplash.jpg",
-    imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
-  },
-  {
-    id: 8,
-    name: "Asakusa",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
-    imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/yoav-aziz-tKCd-IWc4gI-unsplash.jpg",
-    imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+    imageAlt: "Golf Resort",
   },
 ];
