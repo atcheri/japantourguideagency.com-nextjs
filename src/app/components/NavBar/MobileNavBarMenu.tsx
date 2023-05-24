@@ -30,9 +30,9 @@ const MobileNavBarMenu: FC<MobileNavBarMenuProps> = ({
             />
           </Disclosure.Button>
           <Disclosure.Panel className="mt-2 space-y-2">
-            {items.map(({ name, href }) => (
+            {items.map(({ name, href }, i) => (
               <div
-                key={name}
+                key={`${title}-${name}-${i}`}
                 className="group relative flex items-center gap-x-4 rounded-lg pl-4 text-sm leading-6 hover:bg-gray-50"
               >
                 <div className="flex items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">

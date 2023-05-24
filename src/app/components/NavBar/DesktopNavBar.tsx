@@ -12,7 +12,7 @@ const DesktopNavBar: FC = () => {
   return (
     <Popover.Group
       style={{ color: textColor }}
-      className="hidden lg:flex lg:gap-x-12"
+      className="hidden md:flex md:gap-x-8 lg:gap-x-12"
     >
       {navBarMenu.map((menu) => (
         <DesktopNavBarMenu

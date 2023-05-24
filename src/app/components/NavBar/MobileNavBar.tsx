@@ -15,7 +15,7 @@ type MobileMenuProps = {
 const MobileNavBar = ({ mobileMenuOpen, mobileMenuClose }: MobileMenuProps) => {
   return (
     <Transition show={mobileMenuOpen} as={Fragment}>
-      <Dialog as="div" className="lg:hidden" onClose={mobileMenuClose}>
+      <Dialog as="div" className="md:hidden" onClose={mobileMenuClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -29,27 +29,15 @@ const MobileNavBar = ({ mobileMenuOpen, mobileMenuClose }: MobileMenuProps) => {
         </Transition.Child>
         <Transition.Child
           as={Fragment}
-          enter="transform transition ease-in-out duration-500"
-          enterFrom="translate-x-full"
+          enter="transform transition ease-in-out duration-300"
+          enterFrom="-translate-x-full"
           enterTo="translate-x-0"
-          leave="transform transition ease-in-out duration-500"
+          leave="transform transition ease-in-out duration-300"
           leaveFrom="translate-x-0"
-          leaveTo="translate-x-full"
+          leaveTo="-translate-x-full"
         >
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 left-0 z-10 w-5/6 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link
-                href={ROUTES.HOME.path}
-                className="-m-1.5 p-1.5"
-                onClick={mobileMenuClose}
-              >
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </Link>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -59,6 +47,14 @@ const MobileNavBar = ({ mobileMenuOpen, mobileMenuClose }: MobileMenuProps) => {
                 <XMarkIcon className="h-8 w-8" aria-hidden="true" />
               </button>
             </div>
+            <Link href={ROUTES.HOME.path} onClick={mobileMenuClose}>
+              <Disclosure
+                as="div"
+                className="mt-4 py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 cursor-pointer"
+              >
+                <Disclosure.Button>Home</Disclosure.Button>
+              </Disclosure>
+            </Link>
             {navBarMenu.map(({ menuTitle, menuItems }) => (
               <MobileNavBarMenu
                 key={menuTitle}
@@ -70,7 +66,7 @@ const MobileNavBar = ({ mobileMenuOpen, mobileMenuClose }: MobileMenuProps) => {
             <Link href={ROUTES.CONTACT.path} onClick={mobileMenuClose}>
               <Disclosure
                 as="div"
-                className="py-6 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 cursor-pointer"
+                className="mt-4 py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 cursor-pointer"
               >
                 <Disclosure.Button>Contact Us</Disclosure.Button>
               </Disclosure>
