@@ -34,7 +34,7 @@ export const WelcomeNewsLetterEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`${baseUrl}/static/koala-logo.png`}
+          src={`${baseUrl}/assets/images/jtga-logo.png`}
           width="170"
           height="50"
           alt="Japan Tour Guide Agency"

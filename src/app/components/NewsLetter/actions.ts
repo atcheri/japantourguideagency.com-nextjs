@@ -28,6 +28,6 @@ export const sendNewsLetterEmail = async (email: string): Promise<void> => {
     html: emailHtml,
   };
 
-  sendgrid.send(options);
+  await sendgrid.send(options);
   console.log("news letter email successfully sent to ", email);
 };
