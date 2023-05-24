@@ -4,7 +4,10 @@ import { Button, Modal } from "flowbite-react";
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiStarFill } from "react-icons/ri";
 
 import Image from "next/image";
+import Link from "next/link";
+import { SiTripadvisor } from "react-icons/si";
 import TestimonialContent from "./TestimonialContent";
+import { tripAdvisorReviewsUrl } from "@/helpers/constants";
 import { useState } from "react";
 
 type FeedbackType = {
@@ -13,6 +16,7 @@ type FeedbackType = {
   name: string;
   stars: number;
   title: string;
+  url: string;
 };
 
 const feedbacks: FeedbackType[] = [
@@ -29,17 +33,17 @@ const feedbacks: FeedbackType[] = [
             I really have only super positive memories and anecdotes from this experience. It was truly a delight spending the day with Masae and Tak both and our whole group would highly reccomend this trip!
         `,
     title: "It Was Awesome!",
+    url: "https://www.tripadvisor.com/ShowUserReviews-g1066450-d13144726-r695884742-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html",
   },
   {
     image:
-      "https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/ed/ce/default-avatar-2020-7.jpg",
-    name: "Josh G.",
+      "https://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/89/avatar010.jpg",
+    name: "Pamphile",
     stars: 5,
-    content: `Lots of culture and landscape to explore around the Mt. Fuji area. Our traveller group was large, 9 family members including older adults, teenagers and young children from Canada and the US.
-            Our tour guide Taiji spoke English very well and catered the tour expertly for our group despite our diverse age range. He gave us lots of insights into the heritage of the sites we visited. Later in the evening, he took us to the Shibuya District in Tokyo and showed us the best gift stores and sushi. Arakura Sengen shrine with views of Mt Fuji, with a local ramen lunch was a once in a lifetime experience.
-            You will get everything in the tour description, excellent service and company. Highly recommend this tour for families or large groups. Ask for Taiji to be your guide. It will be the highlight of your vacation.
-        `,
-    title: "Best Tour Guides!",
+    content:
+      "We were very lucky to have clear and sunny weather for our trip to Mt Fuji. Our guide, Mazda, couldn’t do more to help us make the day a memorable and enjoyable experience. He was a very knowledgeable, accommodating and enthusiastic guide. Nothing was too much trouble. He carefully planned out an amazing day of sightseeing for us and took incredible photos of our group throughout the day. I would highly recommend this tour.",
+    title: "Amazing day at Mt Fuji",
+    url: "https://www.tripadvisor.com/ShowUserReviews-g1066450-d13144726-r885781881-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html",
   },
   {
     image:
@@ -47,10 +51,11 @@ const feedbacks: FeedbackType[] = [
     name: "Moustafa H",
     stars: 5,
     content: `This custom-tailored tour of Mt.Fuji was a perfect way to end our trip to Japan. We saw many beautiful views of the mountain, went inside the ice/wind caves, and visited some lakes and an old-styled Japanese village.
-            But our tour guide Sumiko and driver Tak truly made the whole day special. Both were super kind, funny, and a joy to just talk with. Sumiko was so knowledgeable on the history and culture of each spot, and took us to sites we wouldn't have found on our own. Tak was super funny, and even went out of his way to drive us past spots in the city that my travel party would enjoy on our way back to the hotel.
-            They both also gave us recommendations for things to do for the rest of our stay in Japan. Ask for them, and you'll have an unforgettable experience!
-    `,
+      But our tour guide Sumiko and driver Tak truly made the whole day special. Both were super kind, funny, and a joy to just talk with. Sumiko was so knowledgeable on the history and culture of each spot, and took us to sites we wouldn't have found on our own. Tak was super funny, and even went out of his way to drive us past spots in the city that my travel party would enjoy on our way back to the hotel.
+      They both also gave us recommendations for things to do for the rest of our stay in Japan. Ask for them, and you'll have an unforgettable experience!
+      `,
     title: "Amazing Trip",
+    url: "https://www.tripadvisor.com/ShowUserReviews-g1066450-d13144726-r887727634-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html",
   },
 ];
 
@@ -77,7 +82,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="container mx-auto my-16 sm:my-24 lg:my-32 px-3">
+    <section className="container mx-auto py-8 lg:py-16 px-3 sm:text-lg">
       <div className="flex flex-col gap-2 mb-16">
         <h2 className="text-3xl font-semibold">
           Hear from Our Satisfied Travelers
@@ -88,11 +93,10 @@ const Testimonials = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-        {feedbacks.map(({ image, name, stars, content, title }, id) => (
+        {feedbacks.map(({ image, name, stars, content, title, url }, id) => (
           <div
             key={`feedback-${id}`}
-            className="p-6 bg-white shadow-md rounded-lg cursor-pointer"
-            onClick={() => toggleShow(title, content)}
+            className="p-6 bg-white shadow-md rounded-lg"
           >
             <div className="flex justify-end sm:-mt-12">
               <Image
@@ -113,21 +117,35 @@ const Testimonials = () => {
                   />
                 ))}
               </div>
-              <p className="mt-2 text-slate-500">
+              <p
+                className="mt-2 text-slate-500 cursor-pointer"
+                onClick={() => toggleShow(title, content)}
+              >
                 <RiDoubleQuotesL className="h-10 w-10 relative -left-5 opacity-40" />
                 <TestimonialContent content={content} />
                 <span className="flex justify-end">
                   <RiDoubleQuotesR className="h-10 w-10 relative -top-5 -right-5 opacity-40" />
                 </span>
               </p>
-              <div className="flex justify-end mt-4">
-                <span className="text-xl font-medium italic text-blue-600">
-                  {name}
-                </span>
+              <div className="flex justify-between mt-4 gap-1 text-lg italic">
+                <Link href={url} target="_blank">
+                  <SiTripadvisor className="h-6 w-6 p-1 bg-green-400 rounded-full rotate-12 duration-200 hover:scale-125" />
+                </Link>
+                <div>
+                  <span className="text-slate-400">from</span>{" "}
+                  <span className=" text-blue-600">{name}</span>
+                </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-6">
+        <Link href={tripAdvisorReviewsUrl} target="_blank">
+          <Button pill={true} outline>
+            View more
+          </Button>
+        </Link>
       </div>
       <Modal
         show={modalContent.show}

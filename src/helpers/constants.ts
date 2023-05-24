@@ -95,3 +95,6 @@ export const navBarMenu: {
     menuItems: companyInfo,
   },
 ];
+
+export const tripAdvisorReviewsUrl =
+  "https://www.tripadvisor.com/Attraction_Review-g1066450-d13144726-Reviews-or30-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html";
