@@ -5,7 +5,7 @@ import Link from "next/link";
 import MobileNavBarMenu from "./MobileNavBarMenu";
 import { ROUTES } from "@/constants/routes";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { navBarMenu } from "./constants";
+import { navBarMenu } from "../../../helpers/constants";
 
 type MobileMenuProps = {
   mobileMenuOpen: boolean;

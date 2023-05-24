@@ -23,7 +23,7 @@ const ProductCard = ({ image, name, href, text, alt }: ProductCardProps) => {
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 group-hover:from-black/10 group-hover:via-black/30 group-hover:to-black/50"></div>
-      <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-8">
+      <div className="absolute inset-0 flex translate-y-[50%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-16">
         <Link href={href}>
           <h1 className="font-dmserif text-3xl font-bold text-white">{name}</h1>
           <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">

@@ -2,7 +2,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Disclosure } from "@headlessui/react";
 import { FC } from "react";
 import Link from "next/link";
-import { MenuItem } from "./constants";
+import { MenuItem } from "../../../helpers/constants";
 import { RxDot } from "react-icons/rx";
 
 type MobileNavBarMenuProps = {

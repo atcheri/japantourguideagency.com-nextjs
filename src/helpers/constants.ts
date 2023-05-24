@@ -13,14 +13,37 @@ export type NavBarMenuType = {
 
 export const bestTours: MenuItem[] = [
   {
-    name: "Tokyo",
-    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
-    description: "Visit the best place in Tokyo in One Day",
-  },
-  {
     name: "Mt. Fuji",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    description: "Mount Fuji Private Tour",
+    description: "Explore the unparalleled natural beauty of Mt. Fuji",
+  },
+  {
+    name: "Mt. Fuji Hakone",
+    href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
+    description:
+      "Experience the best views of Japan's iconic landmark, Mt. Fuji",
+  },
+  {
+    name: "Mt. Fuji Gotemba Outlet",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
+    description:
+      "explore the natural wonders of Mt. Fuji then head to the Gotemba Premium Outlet",
+  },
+  {
+    name: "Tokyo",
+    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
+    description: "Experience the vibrant city of Tokyo",
+  },
+  {
+    name: "Kamakura, Enoshima, Yokohama",
+    href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
+    description:
+      "Explore Kamakura's cultural heritage with optional stops in Yokohama and Enoshima",
+  },
+  {
+    name: "Nikko, Toshogu, Edo Wonderland",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
+    description: "Embark on an unforgettable journey through Nikko",
   },
 ];
 

@@ -3,7 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import Link from "next/link";
-import { NavBarMenuType } from "./constants";
+import { NavBarMenuType } from "../../../helpers/constants";
 import { RxDot } from "react-icons/rx";
 import { useScrollColor } from "./hooks/useScrollColor";
 

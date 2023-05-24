@@ -3,81 +3,64 @@ export const products = [
     id: 1,
     name: "Mount Fuji",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Explore the unparalleled natural beauty of Mt. Fuji.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/tomas-malik-N9Fl32CFMfU-unsplash.jpg",
-    imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200423_060418-scaled.jpg",
+    imageAlt: "Mount Fuji",
   },
   {
     id: 2,
-    name: "Tokyo",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Tokyo Day Trip",
+    href: "https://store.japantourguideagency.com/st_tour/tokyo/",
+    text: "Experience the vibrant city of Tokyo",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/jezael-melgoza-7H77FWkK_x4-unsplash.jpg",
-    imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/PXL_20230509_053636072-scaled.jpg",
+    imageAlt: "Tokyo Day Trip",
   },
   {
     id: 3,
-    name: "Chureito Pagoda",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Mt Fuji and Gotemba Outlet",
+    href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
+    text: "explore the natural wonders of Mt. Fuji then head to the Gotemba Premium Outlet.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/svetlana-gumerova-PMkQ7WVWqr0-unsplash.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/6c.jpg",
+    imageAlt: "Mt Fuji and Gotemba Outlet",
   },
   {
     id: 4,
-    name: "Fuu Jin Tao",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Mt. Fuji and Hakone",
+    href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
+    text: "Experience the best views of Japan's iconic landmark, Mt. Fuji.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/sei-0L0_WPZc5Mc-unsplash.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200218_102340-scaled.jpg",
+    imageAlt: "Mt. Fuji and Hakone",
   },
 
   {
     id: 5,
-    name: "Nikko",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Kamakura, Enoshima",
+    href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
+    text: "Explore Kamakura's cultural heritage with optional stops in Yokohama and Enoshima.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/chantal-lim-TUsye76z6Fg-unsplash.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_0147-scaled.jpg",
+    imageAlt: "Kamakura, Enoshima",
   },
   {
     id: 6,
-    name: "Kyoto",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Nikko, Toshogu, Edo Wonderland",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
+    text: "Embark on an unforgettable journey through Nikko.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/andre-benz-cATZ2eHu5ys-unsplash.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_9672.jpg",
+    imageAlt: "Nikko, Toshogu, Edo Wonderland",
   },
   {
     id: 7,
-    name: "Kamakura",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    name: "Golf Resort",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/yohei-shimomae-VkYbDqseTy4-unsplash.jpg",
-    imageAlt:
-      "Person using a pen to cross a task off a productivity paper card.",
-  },
-  {
-    id: 8,
-    name: "Asakusa",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
-    imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/yoav-aziz-tKCd-IWc4gI-unsplash.jpg",
-    imageAlt:
-      "Hand holding black machined steel mechanical pencil with brass tip and top.",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_3078-scaled.jpg",
+    imageAlt: "Golf Resort",
   },
 ];

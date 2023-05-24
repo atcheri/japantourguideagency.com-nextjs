@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section>
       <div className="absolute w-full h-full bg-fixed bg-center bg-cover bg-hero-pattern" />
-      <div className="absolute w-full h-full bg-black/70 z-[2]" />
+      <div className="absolute w-full h-full bg-black/40 z-[2]" />
       <div className="container mx-auto px-3">
         <div className="flex items-center h-screen">
           <div className="flex flex-col max-w-xl gap-5 z-[2] text-white">

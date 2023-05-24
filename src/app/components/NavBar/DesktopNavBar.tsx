@@ -3,7 +3,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { ROUTES } from "@/constants/routes";
-import { navBarMenu } from "./constants";
+import { navBarMenu } from "../../../helpers/constants";
 import { useScrollColor } from "./hooks/useScrollColor";
 
 const DesktopNavBar: FC = () => {
