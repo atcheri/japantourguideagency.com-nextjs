@@ -15,32 +15,35 @@ export const bestTours: MenuItem[] = [
   {
     name: "Mt. Fuji",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    description: "Private Tour to Mount Fuji",
+    description: "Explore the unparalleled natural beauty of Mt. Fuji",
   },
   {
     name: "Mt. Fuji Hakone",
     href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
-    description: "Lorem Oposum",
+    description:
+      "Experience the best views of Japan's iconic landmark, Mt. Fuji",
   },
   {
     name: "Mt. Fuji Gotemba Outlet",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
-    description: "Lorem Oposum",
+    description:
+      "explore the natural wonders of Mt. Fuji then head to the Gotemba Premium Outlet",
   },
   {
     name: "Tokyo",
     href: "https://store.japantourguideagency.com/st_tour/tokyo/",
-    description: "Visit the best place in Tokyo in One Day",
+    description: "Experience the vibrant city of Tokyo",
   },
   {
     name: "Kamakura, Enoshima, Yokohama",
     href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
-    description: "Lorem Oposum",
+    description:
+      "Explore Kamakura's cultural heritage with optional stops in Yokohama and Enoshima",
   },
   {
     name: "Nikko, Toshogu, Edo Wonderland",
     href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
-    description: "Lorem Oposum",
+    description: "Embark on an unforgettable journey through Nikko",
   },
 ];
 

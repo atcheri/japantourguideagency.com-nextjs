@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: "Mount Fuji",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-tour/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Explore the unparalleled natural beauty of Mt. Fuji.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200423_060418-scaled.jpg",
     imageAlt: "Mount Fuji",
@@ -12,7 +12,7 @@ export const products = [
     id: 2,
     name: "Tokyo Day Trip",
     href: "https://store.japantourguideagency.com/st_tour/tokyo/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Experience the vibrant city of Tokyo",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/PXL_20230509_053636072-scaled.jpg",
     imageAlt: "Tokyo Day Trip",
@@ -21,7 +21,7 @@ export const products = [
     id: 3,
     name: "Mt Fuji and Gotemba Outlet",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "explore the natural wonders of Mt. Fuji then head to the Gotemba Premium Outlet.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/6c.jpg",
     imageAlt: "Mt Fuji and Gotemba Outlet",
@@ -30,7 +30,7 @@ export const products = [
     id: 4,
     name: "Mt. Fuji and Hakone",
     href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Experience the best views of Japan's iconic landmark, Mt. Fuji.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_20200218_102340-scaled.jpg",
     imageAlt: "Mt. Fuji and Hakone",
@@ -40,7 +40,7 @@ export const products = [
     id: 5,
     name: "Kamakura, Enoshima",
     href: "https://store.japantourguideagency.com/st_tour/kamakura-enoshima-yokohama/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Explore Kamakura's cultural heritage with optional stops in Yokohama and Enoshima.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_0147-scaled.jpg",
     imageAlt: "Kamakura, Enoshima",
@@ -49,7 +49,7 @@ export const products = [
     id: 6,
     name: "Nikko, Toshogu, Edo Wonderland",
     href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    text: "Embark on an unforgettable journey through Nikko.",
     imageSrc:
       "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_9672.jpg",
     imageAlt: "Nikko, Toshogu, Edo Wonderland",
@@ -57,10 +57,10 @@ export const products = [
   {
     id: 7,
     name: "Golf Resort",
-    href: "#",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.",
+    href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     imageSrc:
-      "https://store.japantourguideagency.com/wp-content/uploads/2022/04/yohei-shimomae-VkYbDqseTy4-unsplash.jpg",
+      "https://store.japantourguideagency.com/wp-content/uploads/2023/05/IMG_3078-scaled.jpg",
     imageAlt: "Golf Resort",
   },
 ];
