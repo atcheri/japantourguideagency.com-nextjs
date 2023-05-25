@@ -33,12 +33,12 @@ const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute -left-24 top-full z-10 mt-3 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+            <Popover.Panel className="absolute right-0 top-full z-10 mt-3 w-80 max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
               <div className="p-1">
                 {items.map((menu) => (
                   <div
                     key={menu.name}
-                    className="group relative flex items-center gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-4 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100"
                   >
                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                       <RxDot

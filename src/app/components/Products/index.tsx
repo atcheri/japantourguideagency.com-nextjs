@@ -6,20 +6,20 @@ import { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FC } from "react";
-import ProductCard from "./Products/ProductCard";
+import ProductCard from "./ProductCard";
 import { Tour } from "@/types/tour";
 import { register } from "swiper/element/bundle";
 
 register();
 
-const SwiperSlider: FC<{ tours: Tour[] }> = ({ tours }) => {
+const Products: FC<{ tours: Tour[] }> = ({ tours }) => {
   if (!tours) {
     return null;
   }
 
   return (
     <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 px-3 sm:text-lg">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <div className="flex flex-col gap-2 mb-16">
           <h2 className="text-3xl font-semibold">Our Popular Tours</h2>
           <p className="text-xl text-slate-600">
@@ -39,10 +39,19 @@ const SwiperSlider: FC<{ tours: Tour[] }> = ({ tours }) => {
             depth: 100,
             modifier: 2.5,
           }}
-          slidesPerView={1}
+          slidesPerView={1.15}
           breakpoints={{
             480: {
+              slidesPerView: 1.35,
+            },
+            640: {
+              slidesPerView: 1.6,
+            },
+            768: {
               slidesPerView: 2,
+            },
+            960: {
+              slidesPerView: 2.5,
             },
             1024: {
               slidesPerView: 3,
@@ -70,4 +79,4 @@ const SwiperSlider: FC<{ tours: Tour[] }> = ({ tours }) => {
   );
 };
 
-export default SwiperSlider;
+export default Products;
