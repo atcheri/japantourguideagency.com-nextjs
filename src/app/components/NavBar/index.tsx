@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import { FC, useState } from "react";
 
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import DesktopNavBar from "./DesktopNavBar";
@@ -9,37 +9,15 @@ import { useScrollColor } from "./hooks/useScrollColor";
 
 const NavBar: FC = () => {
   const { bgColor, textColor } = useScrollColor();
-  const headerRef = useRef<HTMLDivElement | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    let prevPosY = window.scrollY;
-
-    const handleShowNavBar = () => {
-      const headerElement = headerRef.current;
-      const currPosY = window.scrollY;
-      const direction = currPosY > prevPosY ? "down" : "up";
-      if (!headerElement) {
-        return;
-      } else if (direction === "up" && currPosY - prevPosY < -10) {
-        headerElement.style.transform = "translateY(0)";
-      } else if (direction === "down" && currPosY - prevPosY > 10) {
-        headerElement.style.transform = "translateY(-90px)";
-      }
-      prevPosY = currPosY;
-    };
-    window.addEventListener("scroll", handleShowNavBar);
-    return () => window.removeEventListener("scroll", handleShowNavBar);
-  }, []);
 
   return (
     <header
       style={{ backgroundColor: bgColor }}
       className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
-      ref={headerRef}
     >
       <nav
-        className="mx-auto max-w-screen-xl flex items-center justify-between p-6 lg:px-8"
+        className="container mx-auto max-w-6xl flex items-center justify-between p-6 lg:px-8"
         aria-label="Main navigation bar"
       >
         <div className="flex md:hidden">
