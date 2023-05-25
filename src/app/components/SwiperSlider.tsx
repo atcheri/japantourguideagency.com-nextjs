@@ -5,13 +5,18 @@ import "swiper/css/bundle";
 import { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { FC } from "react";
 import ProductCard from "./Products/ProductCard";
-import { products } from "@/helpers/products";
+import { Tour } from "@/types/tour";
 import { register } from "swiper/element/bundle";
 
 register();
 
-const SwiperSlider = () => {
+const SwiperSlider: FC<{ tours: Tour[] }> = ({ tours }) => {
+  if (!tours) {
+    return null;
+  }
+
   return (
     <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 px-3 sm:text-lg">
       <div className="container mx-auto">
@@ -48,14 +53,14 @@ const SwiperSlider = () => {
           }}
           // pagination={{ clickable: true }}
         >
-          {products.map(({ id, imageSrc, name, href, text, imageAlt }) => (
+          {tours.map(({ id, imageSrc, name, href, text }) => (
             <SwiperSlide key={id}>
               <ProductCard
                 image={imageSrc}
                 name={name}
                 text={text}
                 href={href}
-                alt={imageAlt}
+                alt={name}
               />
             </SwiperSlide>
           ))}

@@ -19,6 +19,9 @@ export const STORE_ROUTES: Record<string, PathType> = Object.freeze({
   },
 });
 
+export const apiUrl = `${STORE_ROUTES.STORE.path}/wp-json/traveler/services`;
+export const apiAllToursUrl = `${STORE_ROUTES.STORE.path}/wp-json/traveler/services/tours?orderby=ASC&order=ID&paged=1&posts_per_page=20`;
+
 export const ROUTES: Record<string, PathType> = Object.freeze({
   HOME: {
     name: "Home",
