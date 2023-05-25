@@ -31,8 +31,10 @@ const MobileNavBarMenu: FC<MobileNavBarMenuProps> = ({
           </Disclosure.Button>
           <Disclosure.Panel className="mt-2 space-y-2">
             {items.map(({ name, href }, i) => (
-              <div
+              <Link
                 key={`${title}-${name}-${i}`}
+                href={href}
+                onClick={mobileMenuClose}
                 className="group relative flex items-center gap-x-4 rounded-lg pl-4 text-sm leading-6 hover:bg-gray-50"
               >
                 <div className="flex items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
@@ -41,15 +43,10 @@ const MobileNavBarMenu: FC<MobileNavBarMenuProps> = ({
                     aria-hidden="true"
                   />
                 </div>
-                <Disclosure.Button
-                  onClick={mobileMenuClose}
-                  as={Link}
-                  href={href}
-                  className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50"
-                >
+                <Disclosure.Button className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50">
                   {name}
                 </Disclosure.Button>
-              </div>
+              </Link>
             ))}
           </Disclosure.Panel>{" "}
         </>

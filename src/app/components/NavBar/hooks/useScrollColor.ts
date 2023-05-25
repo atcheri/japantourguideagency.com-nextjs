@@ -13,7 +13,7 @@ export const useScrollColor = () => {
       return;
     }
     const changeColor = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 150) {
         setBgColor("white");
         setTextColor("black");
       } else {
@@ -28,7 +28,7 @@ export const useScrollColor = () => {
   }, [isHome]);
 
   useEffect(() => {
-    if (isHome && window.scrollY < 90) {
+    if (isHome && window.scrollY < 150) {
       setBgColor("transparent");
       setTextColor("white");
     } else {
