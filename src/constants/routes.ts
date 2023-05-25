@@ -44,6 +44,14 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
     name: "Policy",
     path: "/policy",
   },
+  ARTICLES_BEACH_RESORTS: {
+    name: "Beach Resorts",
+    path: "/articles/beach-resorts",
+  },
+  ARTICLES_CRUISE_BOAT: {
+    name: "Cruise Boat",
+    path: "/articles/cruise-boat",
+  },
   ARTICLES_GOLF_RESORTS: {
     name: "Golf Resorts",
     path: "/articles/golf-resorts",
@@ -53,7 +61,7 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
     path: "/articles/ski-and-snow-resorts",
   },
   ARTICLES_WELLNESS: {
-    name: "Wellness And Eco-Tours In Japan",
+    name: "Wellness And Eco-Tourism",
     path: "/articles/wellness-and-eco-tours-in-japan",
   },
 });

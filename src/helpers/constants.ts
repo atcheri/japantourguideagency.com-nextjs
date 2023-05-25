@@ -49,19 +49,29 @@ export const bestTours: MenuItem[] = [
 
 export const japaneseResorts: MenuItem[] = [
   {
-    name: "Wellness and Eco Tourism",
+    name: ROUTES.ARTICLES_WELLNESS.name,
     href: ROUTES.ARTICLES_WELLNESS.path,
     description: "Sustainable and well-being in Japan",
   },
   {
-    name: "Ski and snow resorts",
+    name: ROUTES.ARTICLES_SKI_RESORTS.name,
     href: ROUTES.ARTICLES_SKI_RESORTS.path,
     description: "Discover the beauty of Japan in winter",
   },
   {
-    name: "Golf resorts",
+    name: ROUTES.ARTICLES_GOLF_RESORTS.name,
     href: ROUTES.ARTICLES_GOLF_RESORTS.path,
-    description: "TO BE DEFINED",
+    description: "Golfing journey in the Land of the Rising Sun",
+  },
+  {
+    name: ROUTES.ARTICLES_BEACH_RESORTS.name,
+    href: ROUTES.ARTICLES_BEACH_RESORTS.path,
+    description: "Coral reefs or coastal towns",
+  },
+  {
+    name: ROUTES.ARTICLES_CRUISE_BOAT.name,
+    href: ROUTES.ARTICLES_CRUISE_BOAT.path,
+    description: "Harmony between traditional and modern Japan",
   },
 ];
 
