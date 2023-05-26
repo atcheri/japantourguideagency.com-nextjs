@@ -1,4 +1,4 @@
-import { Popover, Transition } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
@@ -10,10 +10,10 @@ import { useScrollColor } from "./hooks/useScrollColor";
 const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
   const { textColor } = useScrollColor();
   return (
-    <Popover className="relative">
+    <Menu as="div" className="relative inline-block text-left">
       {({ open }) => (
         <>
-          <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6">
+          <Menu.Button className="flex items-center gap-x-1 font-semibold leading-6 focus:outline-none">
             {title}
             <ChevronDownIcon
               style={{ color: textColor }}
@@ -22,19 +22,19 @@ const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
               }`}
               aria-hidden="true"
             />
-          </Popover.Button>
+          </Menu.Button>
 
           <Transition
             as={Fragment}
-            enter="transition ease-out duration-200"
-            enterFrom="opacity-0 translate-y-1"
-            enterTo="opacity-100 translate-y-0"
-            leave="transition ease-in duration-150"
-            leaveFrom="opacity-100 translate-y-0"
-            leaveTo="opacity-0 translate-y-1"
+            enter="transition ease-out duration-300"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
           >
-            <Popover.Panel className="absolute right-0 top-full z-10 mt-3 w-80 max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
-              <div className="p-1">
+            <Menu.Items className="absolute right-0 origin-top-right divide-y divide-red-500 top-full z-10 mt-3 w-80 max-w-sm overflow-hidden rounded-md bg-white shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+              <div className="px-1 py-1">
                 {items.map((menu) => (
                   <div
                     key={menu.name}
@@ -47,24 +47,24 @@ const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
                       />
                     </div>
                     <div className="flex-auto text-black">
-                      <Popover.Button
+                      <Menu.Items
                         as={Link}
                         href={menu.href}
                         className="block font-semibold"
                       >
                         {menu.name}
                         <span className="absolute inset-0" />
-                      </Popover.Button>
+                      </Menu.Items>
                       <p className="mt-1 text-gray-600">{menu.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </Popover.Panel>
+            </Menu.Items>
           </Transition>
         </>
       )}
-    </Popover>
+    </Menu>
   );
 };
 
