@@ -18,7 +18,7 @@ const Products: FC<{ tours: Tour[] }> = ({ tours }) => {
   }
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 px-3 sm:text-lg">
+    <section className="container mx-auto bg-white dark:bg-gray-900 py-16 sm:py-24 lg:py-32 px-3 sm:text-lg">
       <div className="mx-auto">
         <div className="flex flex-col gap-2 mb-16">
           <h2 className="text-3xl font-semibold">Our Popular Tours</h2>
@@ -57,7 +57,7 @@ const Products: FC<{ tours: Tour[] }> = ({ tours }) => {
               slidesPerView: 3,
             },
             1280: {
-              slidesPerView: 4,
+              slidesPerView: 3.5,
             },
           }}
           // pagination={{ clickable: true }}
