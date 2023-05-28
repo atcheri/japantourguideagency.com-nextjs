@@ -1,11 +1,9 @@
 const photoLinks = [
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/1-scaled.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/2-scaled.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/3-scaled.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/4-scaled.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/6-scaled.jpg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/GundamDay-scaled.jpeg",
-  "https://store.japantourguideagency.com/wp-content/uploads/2023/05/GundamNight-scaled.jpg",
+  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/andre-benz-cATZ2eHu5ys-unsplash.jpg",
+  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/sophie-keen-iYjerlfwBhA-unsplash.jpg",
+  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/david-emrich-VCM99u6HltA-unsplash.jpg",
+  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/chantal-lim-TUsye76z6Fg-unsplash.jpg",
+  "https://store.japantourguideagency.com/wp-content/uploads/2022/04/atul-vinayak-PpYRtDK8l0g-unsplash.jpg",
 ];
 
 const getRandomInt = (
