@@ -57,7 +57,7 @@ const Products: FC<{ tours: Tour[] }> = ({ tours }) => {
               slidesPerView: 3,
             },
             1280: {
-              slidesPerView: 4,
+              slidesPerView: 3.5,
             },
           }}
           // pagination={{ clickable: true }}
