@@ -22,11 +22,16 @@ const NavBar: FC = () => {
 
     const handleScrollDirection = () => {
       const headerEl = headerRef.current;
-      const currPosY = window.scrollY;
-      const direction = currPosY - prevPosY > 0 ? "down" : "up";
       if (!headerEl) {
         return;
-      } else if (
+      }
+      if (width >= NAVBAR_HIDE_MAX_WIDTH) {
+        headerEl.style.transform = "translateY(0px)";
+        return;
+      }
+      const currPosY = window.scrollY;
+      const direction = currPosY - prevPosY > 0 ? "down" : "up";
+      if (
         direction === "down" &&
         currPosY - prevPosY > HIDE_NAVBAR_THRESHOLD &&
         width < NAVBAR_HIDE_MAX_WIDTH
@@ -39,7 +44,6 @@ const NavBar: FC = () => {
         headerEl.style.transform = "translateY(0px)";
       }
       prevPosY = currPosY;
-      console.log(width);
     };
     window.addEventListener("scroll", handleScrollDirection);
     return () => window.removeEventListener("scroll", handleScrollDirection);
