@@ -128,7 +128,11 @@ const Testimonials = () => {
                 </span>
               </p>
               <div className="flex justify-between mt-4 gap-1 text-lg italic">
-                <Link href={url} target="_blank">
+                <Link
+                  href={url}
+                  target="_blank"
+                  aria-label={`Read more about ${name} testimonial on tripadvisor`}
+                >
                   <SiTripadvisor className="h-6 w-6 p-1 bg-green-400 rounded-full rotate-12 duration-200 hover:scale-125" />
                 </Link>
                 <div>
