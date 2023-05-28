@@ -6,9 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNavBar from "./MobileNavBar";
 import { useScrollColor } from "./hooks/useScrollColor";
+import useWindowSize from "./hooks/useWindowSize";
+
+const HIDE_NAVBAR_THRESHOLD: number = 10;
+const NAVBAR_HIDE_MAX_WIDTH: number = 768;
 
 const NavBar: FC = () => {
   const { bgColor, textColor } = useScrollColor();
+  const { width } = useWindowSize();
   const headerRef = useRef<HTMLDivElement | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -18,20 +23,18 @@ const NavBar: FC = () => {
     const handleScrollDirection = () => {
       const headerEl = headerRef.current;
       const currPosY = window.scrollY;
-      const width = window.innerWidth;
       const direction = currPosY - prevPosY > 0 ? "down" : "up";
       if (!headerEl) {
         return;
       } else if (
         direction === "down" &&
-        currPosY - prevPosY > 10 &&
-        width < 768
+        currPosY - prevPosY > HIDE_NAVBAR_THRESHOLD &&
+        width < NAVBAR_HIDE_MAX_WIDTH
       ) {
         headerEl.style.transform = "translateY(-100px)";
       } else if (
         direction === "up" &&
-        currPosY - prevPosY < -10 &&
-        width < 768
+        currPosY - prevPosY < -HIDE_NAVBAR_THRESHOLD
       ) {
         headerEl.style.transform = "translateY(0px)";
       }
@@ -40,7 +43,7 @@ const NavBar: FC = () => {
     };
     window.addEventListener("scroll", handleScrollDirection);
     return () => window.removeEventListener("scroll", handleScrollDirection);
-  }, []);
+  }, [width]);
 
   return (
     <header
