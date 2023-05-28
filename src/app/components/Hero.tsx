@@ -13,6 +13,7 @@ const Hero = () => {
             <h2 className="text-xl text-slate-300 md:text-2xl font-semibold">
               {message}
             </h2>
+            <h3>100% positive reviews on tripadvisor</h3>
           </div>
         </div>
       </div>

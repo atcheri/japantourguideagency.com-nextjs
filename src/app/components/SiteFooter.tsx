@@ -1,17 +1,13 @@
 import { FC } from "react";
 import { Footer } from "flowbite-react";
+import LogoLink from "./LogoLink";
 
 const SiteFooter: FC = () => {
   return (
     <Footer container={true}>
       <div className="container mx-auto">
         <div className="flex items-center justify-center">
-          <Footer.Brand
-            href="/"
-            src="https://flowbite.com/docs/images/logo.svg"
-            alt="Japan Tour Guide Agency - Logo"
-            // name="JTGA"
-          />
+          <LogoLink />
 
           <Footer.LinkGroup className="">
             {/* 
