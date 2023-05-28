@@ -2,8 +2,7 @@ import { FC, useEffect, useRef, useState } from "react";
 
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import DesktopNavBar from "./DesktopNavBar";
-import Image from "next/image";
-import Link from "next/link";
+import LogoLink from "../LogoLink";
 import MobileNavBar from "./MobileNavBar";
 import { useScrollColor } from "./hooks/useScrollColor";
 import useWindowSize from "./hooks/useWindowSize";
@@ -56,7 +55,7 @@ const NavBar: FC = () => {
       ref={headerRef}
     >
       <nav
-        className="container mx-auto max-w-6xl flex items-center justify-between p-6 lg:px-8"
+        className="container mx-auto max-w-6xl flex items-center justify-between p-2 lg:px-8"
         aria-label="Main navigation bar"
       >
         <div className="flex md:hidden">
@@ -70,15 +69,7 @@ const NavBar: FC = () => {
             <Bars3Icon className="h-8 w-8" aria-hidden="true" />
           </button>
         </div>
-        <Link href="/">
-          <Image
-            className="h-8 w-auto"
-            src="https://flowbite.com/docs/images/logo.svg"
-            alt="..."
-            width={50}
-            height={50}
-          />
-        </Link>
+        <LogoLink />
         <DesktopNavBar />
       </nav>
       <MobileNavBar
