@@ -3,8 +3,10 @@
 import { Button, Modal } from "flowbite-react";
 import { RiDoubleQuotesL, RiDoubleQuotesR, RiStarFill } from "react-icons/ri";
 
+import { BsCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
+import { RxExternalLink } from "react-icons/rx";
 import { SiTripadvisor } from "react-icons/si";
 import TestimonialContent from "./TestimonialContent";
 import { tripAdvisorReviewsUrl } from "@/helpers/constants";
@@ -91,6 +93,16 @@ const Testimonials = () => {
           Read what our happy customers have to say about their incredible
           experiences exploring Japan with us.
         </p>
+        <p className="text-lg italic text-slate-600">
+          100% positive Reviews on{" "}
+          <Link
+            href={tripAdvisorReviewsUrl}
+            target="_blank"
+            className="duration-200 hover:text-blue-600"
+          >
+            Tripadvisor <RxExternalLink className="inline-block" />
+          </Link>
+        </p>
       </div>
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
         {feedbacks.map(({ image, name, stars, content, title, url }, id) => (
@@ -109,11 +121,11 @@ const Testimonials = () => {
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-slate-600 text-2xl font-semibold">{title}</h3>
-              <div className="flex">
+              <div className="flex gap-1">
                 {[...Array(stars)].map((s, i) => (
-                  <RiStarFill
+                  <BsCircleFill
                     key={`${name}-stars-${i}`}
-                    className="h-6 w-6 fill-yellow-200"
+                    className="h-4 w-4 fill-green-400"
                   />
                 ))}
               </div>

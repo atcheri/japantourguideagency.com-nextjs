@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { STORE_ROUTES } from "@/constants/routes";
+
 const heading = "Create everlasting memories of Japan";
 const message = "And experience unforgettable moments of life";
 
@@ -13,7 +16,11 @@ const Hero = () => {
             <h2 className="text-xl text-slate-300 md:text-2xl font-semibold">
               {message}
             </h2>
-            <h3>100% positive reviews on tripadvisor</h3>
+            <Link href={STORE_ROUTES.STORE.path}>
+              <button className="font-semibold py-2 px-4 border border-blue-800 rounded hover:bg-blue-800 hover:text-white hover:border-transparent">
+                Discover now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
