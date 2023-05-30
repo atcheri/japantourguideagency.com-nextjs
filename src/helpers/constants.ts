@@ -78,12 +78,12 @@ export const japaneseResorts: MenuItem[] = [
 export const companyInfo: MenuItem[] = [
   {
     name: "Our Company Information",
-    href: "/company-info",
+    href: ROUTES.COMPANY.path,
     description: "information about our company",
   },
   {
-    name: "Our Service Policy",
-    href: "/policy",
+    name: "Our Terms and conditions",
+    href: ROUTES.TERMS_SERVICE.path,
     description: "information about our terms and policy",
   },
 ];
@@ -107,4 +107,4 @@ export const navBarMenu: {
 ];
 
 export const tripAdvisorReviewsUrl =
-  "https://www.tripadvisor.com/Attraction_Review-g1066450-d13144726-Reviews-or30-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html";
+  "https://www.tripadvisor.com/Attraction_Review-g1066450-d13144726-Reviews-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html";
