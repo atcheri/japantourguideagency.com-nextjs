@@ -78,12 +78,12 @@ export const japaneseResorts: MenuItem[] = [
 export const companyInfo: MenuItem[] = [
   {
     name: "Our Company Information",
-    href: "/company-info",
+    href: ROUTES.COMPANY.path,
     description: "information about our company",
   },
   {
-    name: "Our Service Policy",
-    href: "/policy",
+    name: "Our Terms and conditions",
+    href: ROUTES.TERMS_SERVICE.path,
     description: "information about our terms and policy",
   },
 ];

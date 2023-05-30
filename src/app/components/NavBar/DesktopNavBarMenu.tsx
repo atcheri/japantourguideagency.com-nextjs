@@ -47,14 +47,14 @@ const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
                       />
                     </div>
                     <div className="flex-auto text-black">
-                      <Menu.Items
+                      <Menu.Item
                         as={Link}
                         href={menu.href}
                         className="block font-semibold"
                       >
                         {menu.name}
                         <span className="absolute inset-0" />
-                      </Menu.Items>
+                      </Menu.Item>
                       <p className="mt-1 text-gray-600">{menu.description}</p>
                     </div>
                   </div>

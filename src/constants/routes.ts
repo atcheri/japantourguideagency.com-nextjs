@@ -43,9 +43,9 @@ export const ROUTES: Record<string, PathType> = Object.freeze({
     name: "Partners",
     path: "/partners",
   },
-  POLICIY: {
-    name: "Policy",
-    path: "/policy",
+  TERMS_SERVICE: {
+    name: "Terms of service",
+    path: "/terms-of-service",
   },
   ARTICLES_BEACH_RESORTS: {
     name: "Beach Resorts",
