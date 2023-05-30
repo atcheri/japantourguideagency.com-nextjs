@@ -1,10 +1,11 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
-import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { FOUNDER_MAIL_ADDRESS } from "@/constants/misc";
+import Link from "next/link";
 
 const OurCompany = () => {
   return (
-    <section className="mx-auto max-w-4xl pt-10">
+    <section className="mx-auto max-w-4xl p-10">
       <article className="min-h-[100svh]">
         <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
           Company Profile
@@ -14,12 +15,12 @@ const OurCompany = () => {
             <li>Company Name: Tokyo Star Agency</li>
             <li>Founder: Taiji ENDO</li>
             <li>
-              E-mail:
+              E-mail:&nbsp;
               <a
-                href="mailto:taiji.endo@tsa-paris.fr"
+                href={`mailto:${FOUNDER_MAIL_ADDRESS}`}
                 className="hover:text-blue-800 hover:underline"
               >
-                taiji.endo@tsa-paris.fr
+                {FOUNDER_MAIL_ADDRESS}
               </a>
             </li>
             <li>Location: Tokyo, Japan</li>
@@ -121,9 +122,25 @@ const OurCompany = () => {
                 me:
               </p>
               <p>
-                Ichigo Ichie (Treasure every encounter as it may not come again)
+                <Link
+                  href="https://en.wikipedia.org/wiki/Ichi-go_ichi-e"
+                  target="_blank"
+                  className="font-semibold text-blue-800 underline"
+                >
+                  Ichigo Ichie
+                </Link>
+                &nbsp;(Treasure every encounter as it may not come again)
               </p>
-              <p>Goen (Relationship/Fate)</p>
+              <p>
+                <Link
+                  href="https://www.masterspeakingjapanese.com/blog/japanese-calligraphy-en"
+                  target="_blank"
+                  className="font-semibold text-blue-800 underline"
+                >
+                  Goen
+                </Link>
+                &nbsp;(Relationship/Fate)
+              </p>
               <p>
                 I believe that people around the world, not just in Japan, value
                 the connections between individuals.

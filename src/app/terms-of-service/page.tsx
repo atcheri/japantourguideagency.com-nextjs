@@ -3,7 +3,7 @@ import React from "react";
 
 const TermsOfService = () => {
   return (
-    <section className="mx-auto max-w-4xl pt-10">
+    <section className="mx-auto max-w-4xl p-10">
       <article className="min-h-[100svh]">
         <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
           Our Terms of Service
