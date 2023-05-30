@@ -17,7 +17,7 @@ const Hero = () => {
               {message}
             </h2>
             <Link href={STORE_ROUTES.STORE.path}>
-              <button className="font-semibold py-2 px-4 border border-blue-800 rounded hover:bg-blue-800 hover:text-white hover:border-transparent">
+              <button className="font-semibold py-2 px-4 border rounded-md transition ease-in-out hover:scale-105 hover:bg-blue-800 hover:text-white hover:border-transparent">
                 Discover now
               </button>
             </Link>
