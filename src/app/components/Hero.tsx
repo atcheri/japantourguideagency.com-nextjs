@@ -11,8 +11,10 @@ const Hero = () => {
       <div className="container mx-auto px-3">
         <div className="flex items-center h-screen">
           <div className="flex flex-col max-w-xl gap-5 z-[2] text-white">
-            <h1 className="text-3xl font-bold md:text-5xl">{heading}</h1>
-            <h2 className="text-xl text-slate-300 md:text-2xl font-semibold">
+            <h1 className="text-3xl font-bold md:text-6xl md:max-w-xs">
+              {heading}
+            </h1>
+            <h2 className="text-xl text-slate-300 font-semibold md:text-2xl md:max-w-sm">
               {message}
             </h2>
             <Link href={STORE_ROUTES.STORE.path}>
