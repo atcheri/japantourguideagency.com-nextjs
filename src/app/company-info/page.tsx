@@ -39,7 +39,7 @@ const OurCompany = () => {
                   <RiDoubleQuotesL className="h-8 w-8 -top-5 -right-5 opacity-40" />
                 </div>
               </div>
-              Japan Tour Guide Agency originally started as Tokyo Star Agency,
+              Tokyo Star Agency originally started as Tokyo Star Agency,
               providing tour guide services for foreign tourists in the Tokyo
               area. As a tour guide myself, I have noticed that many foreign
               tourists share the same impressions about Japan:

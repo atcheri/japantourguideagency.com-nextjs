@@ -10,7 +10,7 @@ type LogoLinkProps = {
 };
 
 const LogoLink: FC<LogoLinkProps> = ({
-  src = "/assets/images/jtga-logo.webp",
+  src = "/assets/images/tsa_logo.webp",
   height = 48,
   width = 48,
 }) => {

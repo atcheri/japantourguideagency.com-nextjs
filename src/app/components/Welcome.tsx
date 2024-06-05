@@ -38,7 +38,7 @@ const Welcome: FC<{ photos: string[] }> = ({
         </div>
         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400 rounded-">
           <h2 className="max-lg:mt-8 mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Welcome to Japan Tour Guide agency
+            Welcome to Tokyo Star Agency
           </h2>
           <div className="mb-4">
             <p>
@@ -81,7 +81,7 @@ export default Welcome;
 {
   /* <div>
     //   <p>
-    //     Welcome to our Japan Tour Guide agency, where we believe that travel is
+    //     Welcome to our Tokyo Star Agency, where we believe that travel is
     //     more than just visiting a destination, but rather a transformational
     //     experience that can change your life. We believe that travel is a
     //     pilgrimage that can help you discover new perspectives, connect with

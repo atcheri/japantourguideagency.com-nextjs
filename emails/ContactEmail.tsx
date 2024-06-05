@@ -24,14 +24,14 @@ export const ContactEmail = ({ message }: ContactEmailProps) => {
   return (
     <Html>
       <Head />
-      <Preview>Japan Tour Guide Agency: Contact</Preview>
+      <Preview>Tokyo Star Agency: Contact</Preview>
 
       <Body className="bg-offwhite text-base font-sans">
         <Img
-          src={`${baseUrl}/assets/images/jtga-logo.png`}
+          src={`${baseUrl}/assets/images/tsa_logo.webp`}
           width="184"
           height="75"
-          alt="Japan Tour Guide Agency"
+          alt="Tokyo Star Agency"
           className="mx-auto my-20"
         />
         <Container className="bg-white p-45">
