@@ -33,7 +33,10 @@ const ProductsCarousel = () => {
           >
             <CarouselContent>
               {tours.map(({ imageSrc, href, id, name, text }) => (
-                <CarouselItem key={id} className="basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={id}
+                  className="basis-1/2 lg:basis-1/3 2xl:basis-1/4"
+                >
                   <ProductCard
                     image={imageSrc}
                     name={name}

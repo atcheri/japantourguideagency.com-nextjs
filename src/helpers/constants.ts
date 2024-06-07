@@ -96,10 +96,10 @@ export const navBarMenu: {
     menuTitle: "Recommended Tours",
     menuItems: bestTours,
   },
-  {
-    menuTitle: "Japanese Resorts",
-    menuItems: japaneseResorts,
-  },
+  // {
+  //   menuTitle: "Japanese Resorts",
+  //   menuItems: japaneseResorts,
+  // },
   {
     menuTitle: "About Us",
     menuItems: companyInfo,
