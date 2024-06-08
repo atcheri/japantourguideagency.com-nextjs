@@ -9,8 +9,8 @@ const Hero = () => {
   return (
     <section className="h-[50vh] md:h-screen md:bg-fixed bg-cover bg-hero-pattern">
       <div className="flex items-center container mx-auto h-full">
-        {/* <div className="flex flex-col gap-5 rounded-md text-primary-foreground bg-black/5 backdrop-filter backdrop-blur-md p-2 max-w-xs"> */}
-        <div className="flex flex-col gap-5 text-primary-foreground pl-2 max-w-xs">
+        <div className="flex flex-col gap-5 rounded-lg text-primary-foreground bg-black/5 backdrop-filter backdrop-blur-md p-2 max-w-xs">
+          {/* <div className="flex flex-col gap-5 text-primary-foreground pl-2 max-w-xs"> */}
           <h1 className="text-3xl font-bold md:text-6xl md:max-w-xs">
             {heading}
           </h1>
