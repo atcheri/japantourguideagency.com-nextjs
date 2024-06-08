@@ -64,7 +64,7 @@ dependencies:
     version: 1.6.5
   flowbite-react:
     specifier: ^0.4.4
-    version: 0.4.4(flowbite@1.6.5)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.2)
+    version: 0.4.4(flowbite@1.6.5)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.4)
   lucide-react:
     specifier: ^0.383.0
     version: 0.383.0(react@18.2.0)
@@ -90,17 +90,17 @@ dependencies:
     specifier: ^9.3.2
     version: 9.3.2
   tailwind-gradient-mask-image:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.2.0
+    version: 1.2.0
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
   tailwindcss:
-    specifier: 3.3.2
-    version: 3.3.2
+    specifier: ^3.4.4
+    version: 3.4.4
   tailwindcss-animate:
     specifier: ^1.0.7
-    version: 1.0.7(tailwindcss@3.3.2)
+    version: 1.0.7(tailwindcss@3.4.4)
   typescript:
     specifier: 5.0.4
     version: 5.0.4
@@ -2410,6 +2410,17 @@ packages:
       micromatch: 4.0.5
     dev: false
 
+  /fast-glob@3.3.2:
+    resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
+    engines: {node: '>=8.6.0'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+    dev: false
+
   /fast-json-stable-stringify@2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: false
@@ -2466,7 +2477,7 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: false
 
-  /flowbite-react@0.4.4(flowbite@1.6.5)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.3.2):
+  /flowbite-react@0.4.4(flowbite@1.6.5)(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.4):
     resolution: {integrity: sha512-cDGtzRp8Ca6rOooNUlDzI7NwAQqzRFYENQ5tI5kRlgobUITxzCgPSv+S1laBlSyrHzlvaneBy4kkX3HrMtEn0A==}
     peerDependencies:
       flowbite: ^1
@@ -2481,7 +2492,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-icons: 4.8.0(react@18.2.0)
       react-indiana-drag-scroll: 2.2.0(react-dom@18.2.0)(react@18.2.0)
-      tailwindcss: 3.3.2
+      tailwindcss: 3.4.4
     dev: false
 
   /flowbite@1.6.5:
@@ -2610,6 +2621,7 @@ packages:
 
   /glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -3099,8 +3111,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: false
 
-  /jiti@1.18.2:
-    resolution: {integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==}
+  /jiti@1.21.3:
+    resolution: {integrity: sha512-uy2bNX5zQ+tESe+TiC7ilGRz8AtRGmnJH55NC5S0nSUjvvvM2hJHmefHErugGXN4pNv4Qx7vLsnNw9qJ9mtIsw==}
     hasBin: true
     dev: false
 
@@ -4438,8 +4450,8 @@ packages:
     resolution: {integrity: sha512-qCN98uP7i9z0fIS4amQ5zbGBOq+OSigYeGvPy7NDk8Y9yncqDZ9pRPgfsc2PJIVM9RrJj7GIfuRgmjoUU9zTHQ==}
     dev: false
 
-  /tailwind-gradient-mask-image@1.0.0:
-    resolution: {integrity: sha512-eZJhn6wHZ0Irfpq5sm0ErewH6IC82gqjfVsDQ7MYrJcfTgepOoTI6EryLppNPoZds4EeD6/H0WrysT8HE90H5g==}
+  /tailwind-gradient-mask-image@1.2.0:
+    resolution: {integrity: sha512-tUJaGhvqbJFiVKJu6EU5n//KvGdVvY3L3VOFNqjztk13+ifAk00pcSNHBTgHfUiBGOEzDn0gFRbSmsftUV1lXA==}
     dev: false
 
   /tailwind-merge@2.3.0:
@@ -4448,12 +4460,12 @@ packages:
       '@babel/runtime': 7.24.7
     dev: false
 
-  /tailwindcss-animate@1.0.7(tailwindcss@3.3.2):
+  /tailwindcss-animate@1.0.7(tailwindcss@3.4.4):
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
-      tailwindcss: 3.3.2
+      tailwindcss: 3.4.4
     dev: false
 
   /tailwindcss@3.2.7(postcss@8.4.21):
@@ -4490,8 +4502,8 @@ packages:
       - ts-node
     dev: false
 
-  /tailwindcss@3.3.2:
-    resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
+  /tailwindcss@3.4.4:
+    resolution: {integrity: sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -4500,10 +4512,10 @@ packages:
       chokidar: 3.5.3
       didyoumean: 1.2.2
       dlv: 1.1.3
-      fast-glob: 3.2.12
+      fast-glob: 3.3.2
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.18.2
+      jiti: 1.21.3
       lilconfig: 2.1.0
       micromatch: 4.0.5
       normalize-path: 3.0.0
@@ -4515,7 +4527,6 @@ packages:
       postcss-load-config: 4.0.1(postcss@8.4.23)
       postcss-nested: 6.0.1(postcss@8.4.23)
       postcss-selector-parser: 6.0.12
-      postcss-value-parser: 4.2.0
       resolve: 1.22.2
       sucrase: 3.32.0
     transitivePeerDependencies:

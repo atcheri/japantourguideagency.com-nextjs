@@ -1,3 +1,7 @@
+import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,9 +11,6 @@ import {
   CardFooter,
   CardDescription,
 } from "@/components/ui/card";
-import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 type ProductCardProps = {
   image: string;
@@ -27,10 +28,10 @@ export const ProductCard = ({
   text,
 }: ProductCardProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <Card className="flex flex-col border-2 overflow-hidden min-h-full gap-2">
         <CardHeader className="p-0">
-          <Image src={image} alt={alt} width={450} height={450} />
+          <Image src={image} alt={alt} width={620} height={620} />
         </CardHeader>
         <CardContent className="px-2 pb-0 grow">
           <CardTitle className="text-lg leading-6 line-clamp-2 mb-3">

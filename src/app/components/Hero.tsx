@@ -7,27 +7,25 @@ const message = "And experience unforgettable moments of life";
 
 const Hero = () => {
   return (
-    <section>
-      <div className="absolute w-full h-full bg-fixed bg-cover overflow-hidden bg-hero-pattern" />
-      <div className="container mx-auto pt-8">
-        <div className="flex items-center h-screen">
-          <div className="flex flex-col max-w-xl gap-5 z-[2] text-primary-foreground">
-            <h1 className="text-3xl font-bold md:text-6xl md:max-w-xs">
-              {heading}
-            </h1>
-            <h2 className="text-xl font-semibold md:text-2xl md:max-w-sm">
-              {message}
-            </h2>
-            <Link href={STORE_ROUTES.STORE.path}>
-              <Button
-                size="lg"
-                variant="shine"
-                className="text-md font-semibold border border-slate-100"
-              >
-                Disover now
-              </Button>
-            </Link>
-          </div>
+    <section className="h-[50vh] md:h-screen md:bg-fixed bg-cover bg-hero-pattern">
+      <div className="flex items-center container mx-auto h-full">
+        {/* <div className="flex flex-col gap-5 rounded-md text-primary-foreground bg-black/5 backdrop-filter backdrop-blur-md p-2 max-w-xs"> */}
+        <div className="flex flex-col gap-5 text-primary-foreground pl-2 max-w-xs">
+          <h1 className="text-3xl font-bold md:text-6xl md:max-w-xs">
+            {heading}
+          </h1>
+          <h2 className="text-xl font-semibold md:text-2xl md:max-w-sm">
+            {message}
+          </h2>
+          <Link href={STORE_ROUTES.STORE.path} className="self-start">
+            <Button
+              size="lg"
+              variant="shine"
+              className="text-md font-semibold border border-slate-100"
+            >
+              Disover now
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

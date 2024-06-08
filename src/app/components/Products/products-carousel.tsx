@@ -8,8 +8,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { ProductCard } from "./product-card";
 import { fetchProducts } from "@/helpers/products";
+import { ProductCard } from "./product-card";
 
 const ProductsCarousel = () => {
   const tours = use(fetchProducts());
@@ -35,7 +35,7 @@ const ProductsCarousel = () => {
               {tours.map(({ imageSrc, href, id, name, text }) => (
                 <CarouselItem
                   key={id}
-                  className="basis-1/2 lg:basis-1/3 2xl:basis-1/4"
+                  className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
                   <ProductCard
                     image={imageSrc}
