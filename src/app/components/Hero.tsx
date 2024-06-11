@@ -7,7 +7,7 @@ const message = "And experience unforgettable moments of life";
 
 const ClickToAction = () => {
   return (
-    <div className="flex flex-col gap-6 text-primary max-w-xs md:max-w-fit">
+    <div className="flex flex-col gap-6 text-primary">
       <h1 className="text-3xl font-bold md:text-4xl lg:text-6xl md:max-w-72">
         {heading}
       </h1>
@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section className="2xl:container mx-auto">
       <div className="bg-cover bg-center bg-hero-pattern lg:bg-fixed lg:h-screen">
-        <div className="p-16 pt-80 sm:px-24 xl:px-36 lg:h-screen lg:flex lg:items-center ">
+        <div className="max-w-sm pl-16 pt-48 pb-8 sm:pl-24 sm:pt-80 md:pl-36 xl:pl-44 2xl:pl-52 lg:h-screen lg:flex lg:items-center ">
           <ClickToAction />
         </div>
       </div>

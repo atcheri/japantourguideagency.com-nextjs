@@ -16,7 +16,7 @@ const Home = async (): Promise<JSX.Element> => {
       <Features />
       <ProductsCarousel />
       <Testimonials />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </>
   );
 };

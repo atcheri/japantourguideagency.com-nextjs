@@ -20,9 +20,9 @@ const Welcome: FC<{ photos: string[] }> = ({
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div className="grid grid-cols-2 gap-4 mt-8 mx-16 justify-items-center">
+        <div className="grid grid-cols-2 gap-6 mt-8 px-0 md:px-28 lg:px-0 justify-items-center">
           <Image
-            className="w-max rounded-sm max-h-[426px] md:h-[426px]"
+            className="w-fit rounded-sm max-h-[426px] md:h-[426px]"
             src={photoOne}
             alt="Welcome to Japan"
             width={IMAGE_WIDTH}
