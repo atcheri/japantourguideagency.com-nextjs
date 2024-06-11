@@ -70,7 +70,8 @@ const NavBar: FC = () => {
         >
           <span className="sr-only">Open main menu</span>
           <HiMenu
-            className="size-8 text-primary-foreground"
+            className="size-8"
+            style={{ color: textColor }}
             aria-hidden="true"
           />
         </Button>
