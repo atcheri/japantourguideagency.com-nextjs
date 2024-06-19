@@ -42,33 +42,35 @@ const Welcome: FC<{ photos: string[] }> = ({
           </h2>
           <div className="mb-4">
             <p>
-              We believe that travel is more than just visiting a destination,
-              but rather a transformational experience that can change your
-              life.{" "}
+              Since our founding in 2017, we have been providing customized
+              private tours and assisting our guests in creating lifelong
+              memories in Japan.
             </p>
             <div className={!showMore ? "gradient-mask-b-50" : ""}>
               <p>
-                We believe that travel is a pilgrimage that can help you
-                discover new perspectives, connect with different cultures, and
-                create lifelong memories.{" "}
+                We believe that travel is more than just visiting a destination;
+                it&apos;s a transformational experience that can change your
+                life. Travel is a pilgrimage that can help you discover new
+                perspectives, connect with different cultures, and give you an
+                opportunity to re-examine yourself.
               </p>
               <p>
-                Our team of specialized guides are not just experts in their
-                fields, but they are also passionate about creating unique and
-                personalized experiences for each of our clients.{" "}
+                Our team of specialized guides are not only experts in their
+                fields but also passionate about creating unique and
+                personalized experiences for each of our clients.
               </p>
-              {showMore && (
+              {/* {showMore && (
                 <p>
                   We call them our &ldquo;&ldquo;star guides&ldquo;&ldquo;
                   because they go above and beyond to ensure that every journey
                   is exceptional.
                 </p>
-              )}
+              )} */}
             </div>
 
-            <Button color="light" onClick={toggleWelcomeText}>
+            {/* <Button color="light" onClick={toggleWelcomeText}>
               {showMore ? "Read less..." : "Read more..."}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

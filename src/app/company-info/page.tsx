@@ -1,6 +1,6 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 
-import { FOUNDER_MAIL_ADDRESS } from "@/constants/misc";
+import { INFO_MAIL_ADDRESS } from "@/constants/misc";
 import Link from "next/link";
 
 const OurCompany = () => {
@@ -12,18 +12,20 @@ const OurCompany = () => {
         </h1>
         <div className="text-slate-700">
           <ul className="px-6 space-y-3 text-lg font-semibold">
-            <li>Company Name: Tokyo Star Agency</li>
-            <li>Founder: Taiji ENDO</li>
+            <li>Tokyo Star Agency</li>
+            <li>Founded in 2014 Tokyo, Japan</li>
             <li>
-              E-mail:&nbsp;
+              contact:&nbsp;
               <a
-                href={`mailto:${FOUNDER_MAIL_ADDRESS}`}
+                // href={`mailto:${FOUNDER_MAIL_ADDRESS}`}
+                href={`mailto:${INFO_MAIL_ADDRESS}`}
                 className="hover:text-blue-800 hover:underline"
               >
-                {FOUNDER_MAIL_ADDRESS}
+                {/* {FOUNDER_MAIL_ADDRESS} */}
+                {INFO_MAIL_ADDRESS}
               </a>
             </li>
-            <li>Location: Tokyo, Japan</li>
+            <li>旅行業___号</li>
           </ul>
         </div>
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>

@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-scroll-area": "^1.1.0",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-email/components": "^0.0.6",
@@ -36,6 +38,7 @@
     "react-dom": "18.2.0",
     "react-email": "1.9.3",
     "react-icons": "^4.8.0",
+    "react-use": "^17.5.0",
     "swiper": "^9.3.2",
     "tailwind-gradient-mask-image": "^1.2.0",
     "tailwind-merge": "^2.3.0",

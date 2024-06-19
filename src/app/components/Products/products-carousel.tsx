@@ -18,7 +18,7 @@ const ProductsCarousel = () => {
     <section className="bg-white dark:bg-gray-900 py-8 lg:py-16 px-3 sm:text-lg">
       <div className="container mx-auto">
         <div className="flex flex-col gap-2 mb-12">
-          <h2 className="text-3xl font-semibold">Our Popular Tours</h2>
+          <h2 className="text-3xl font-semibold">Our Tours</h2>
           <p className="text-xl text-slate-600">
             The best destinations to discover Japan.
           </p>

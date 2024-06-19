@@ -3,7 +3,7 @@ import { STORE_ROUTES } from "@/constants/routes";
 import { Button } from "@/components/ui/button";
 
 const heading = "Create everlasting memories of Japan";
-const message = "And experience unforgettable moments of life";
+// const message = "And experience unforgettable moments of life";
 
 const ClickToAction = () => {
   return (
@@ -11,9 +11,9 @@ const ClickToAction = () => {
       <h1 className="text-3xl font-bold md:text-4xl lg:text-6xl md:max-w-72">
         {heading}
       </h1>
-      <h2 className="text-lg font-semibold md:text-2xl lg:text-3xl md:max-w-72">
+      {/* <h2 className="text-lg font-semibold md:text-2xl lg:text-3xl md:max-w-72">
         {message}
-      </h2>
+      </h2> */}
       <Link href={STORE_ROUTES.STORE.path} className="self-start">
         <Button
           size="lg"

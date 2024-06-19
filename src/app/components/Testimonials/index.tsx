@@ -11,6 +11,7 @@ import { SiTripadvisor } from "react-icons/si";
 import TestimonialContent from "./TestimonialContent";
 import { tripAdvisorReviewsUrl } from "@/helpers/constants";
 import { useState } from "react";
+import { TestimonialDialog } from "./TestimonialDialog";
 
 type FeedbackType = {
   content: string;
@@ -129,6 +130,12 @@ const Testimonials = () => {
                   />
                 ))}
               </div>
+              <TestimonialDialog
+                open={modalContent.show}
+                toggleShow={() => toggleShow()}
+                title={modalContent.title}
+                description={modalContent.content}
+              />
               <p
                 className="mt-2 text-slate-500 cursor-pointer"
                 onClick={() => toggleShow(title, content)}
@@ -163,7 +170,7 @@ const Testimonials = () => {
           </Button>
         </Link>
       </div>
-      <Modal
+      {/* <Modal
         show={modalContent.show}
         onClose={() => toggleShow()}
         dismissible={true}
@@ -181,7 +188,7 @@ const Testimonials = () => {
             Close
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </section>
   );
 };
