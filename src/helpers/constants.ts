@@ -3,7 +3,7 @@ import { ROUTES } from "@/constants/routes";
 export type MenuItem = {
   name: string;
   href: string;
-  description: string;
+  description?: string;
 };
 
 export type NavBarMenuType = {
@@ -18,21 +18,22 @@ export const bestTours: MenuItem[] = [
     description: "Explore the unparalleled natural beauty of Mt. Fuji",
   },
   {
-    name: "Mt. Fuji Hakone",
+    name: "Mt. Fuji, Hakone",
     href: "https://store.japantourguideagency.com/st_tour/mount-fuji-and-hakone/",
     description:
-      "Experience the best views of Japan's iconic landmark, Mt. Fuji",
+      "Experience the best views of Mt. Fuji, relax at traditional Onsen resort",
   },
   {
-    name: "Mt. Fuji Gotemba Outlet",
+    name: "Mt. Fuji, Gotemba Outlet",
     href: "https://store.japantourguideagency.com/st_tour/mt-fuji-and-gotemba-premium-outlet/",
     description:
-      "explore the natural wonders of Mt. Fuji then head to the Gotemba Premium Outlet",
+      "Explore the natural wonders of Mt. Fuji, then shop at Gotemba Outlet",
   },
   {
     name: "Tokyo",
     href: "https://store.japantourguideagency.com/st_tour/tokyo/",
-    description: "Experience the vibrant city of Tokyo",
+    description:
+      "Explore the vibrant city of Tokyo from small alley to landmark",
   },
   {
     name: "Kamakura, Enoshima, Yokohama",
@@ -43,7 +44,8 @@ export const bestTours: MenuItem[] = [
   {
     name: "Nikko, Toshogu, Edo Wonderland",
     href: "https://store.japantourguideagency.com/st_tour/nikko-toshogu-edo-wonderland/",
-    description: "Embark on an unforgettable journey through Nikko",
+    description:
+      "Discover UNESCO-listed temples and shrines, blending beautiful nature",
   },
 ];
 
@@ -79,12 +81,12 @@ export const companyInfo: MenuItem[] = [
   {
     name: "Our Company Information",
     href: ROUTES.COMPANY.path,
-    description: "information about our company",
+    // description: "information about our company",
   },
   {
     name: "Our Terms and conditions",
     href: ROUTES.TERMS_SERVICE.path,
-    description: "information about our terms and policy",
+    // description: "information about our terms and policy",
   },
 ];
 
@@ -93,13 +95,13 @@ export const navBarMenu: {
   menuItems: MenuItem[];
 }[] = [
   {
-    menuTitle: "Recommended Tours",
+    menuTitle: "Tours",
     menuItems: bestTours,
   },
-  {
-    menuTitle: "Japanese Resorts",
-    menuItems: japaneseResorts,
-  },
+  // {
+  //   menuTitle: "Japanese Resorts",
+  //   menuItems: japaneseResorts,
+  // },
   {
     menuTitle: "About Us",
     menuItems: companyInfo,
@@ -107,4 +109,4 @@ export const navBarMenu: {
 ];
 
 export const tripAdvisorReviewsUrl =
-  "https://www.tripadvisor.com/Attraction_Review-g1066450-d13144726-Reviews-Tokyo_Star_Agency-Meguro_Tokyo_Tokyo_Prefecture_Kanto.html";
+  "https://www.tripadvisor.com/Attraction_Review-g1066451-d26319513-Reviews-Tokyo_Star_Agency-Minato_Tokyo_Tokyo_Prefecture_Kanto.html";

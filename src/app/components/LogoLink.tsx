@@ -10,14 +10,14 @@ type LogoLinkProps = {
 };
 
 const LogoLink: FC<LogoLinkProps> = ({
-  src = "/assets/images/jtga-logo.webp",
+  src = "/assets/images/tsa_logo.png",
   height = 48,
   width = 48,
 }) => {
   return (
-    <Link href="/" className="bg-white rounded-full p-1">
+    <Link href="/" className="bg-white rounded-full p-0.5">
       <Image
-        className="h-8 w-auto"
+        className="h-10 w-auto"
         src={src}
         alt={SITE_NAME}
         height={height}

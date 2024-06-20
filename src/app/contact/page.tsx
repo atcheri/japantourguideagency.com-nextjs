@@ -37,10 +37,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full h-screen max-md:mb-24">
-      <div className=" h-2/4 bg-contact-computer bg-fixed bg-center bg-cover" />
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="bg-opacity-75 bg-slate-950 w-full shadow rounded p-8 sm:p-12 -mt-64 lg:-mt-96">
+    <section className="h-screen 2xl:container mx-auto">
+      <div className="h-2/3 bg-contact-computer bg-cover bg-bottom" />
+      <div className="max-w-4xl mx-auto px-8 sm:px-16">
+        <div className="bg-opacity-75 bg-slate-950 w-full shadow rounded p-4 -mt-[470px] lg:-mt-96 ">
           <h1 className="text-white text-3xl font-bold leading-7 text-center mb-8">
             Contact us
           </h1>
@@ -94,11 +94,7 @@ const Contact = () => {
                 ></textarea>
               </div>
             </div>
-            <Button
-              type="submit"
-              className="self-center"
-              disabled={loading || state === "success"}
-            >
+            <Button type="submit" disabled={loading || state === "success"}>
               Send message
             </Button>
           </form>

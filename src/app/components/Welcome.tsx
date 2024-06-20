@@ -20,16 +20,16 @@ const Welcome: FC<{ photos: string[] }> = ({
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div className="grid grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-2 gap-6 mt-8 px-0 md:px-28 lg:px-0 justify-items-center">
           <Image
-            className="w-full rounded-sm max-h-[426px] md:h-[426px]"
+            className="w-fit rounded-sm max-h-[426px] md:h-[426px]"
             src={photoOne}
             alt="Welcome to Japan"
             width={IMAGE_WIDTH}
             height={IMAGE_HEIGHT}
           />
           <Image
-            className="mt-4 w-full lg:mt-10 rounded-sm max-h-[426px] md:h-[426px]"
+            className="mt-4 w-fit lg:mt-10 rounded-sm max-h-[426px] md:h-[426px]"
             src={photoTwo}
             alt="Discover the beauty of Japan"
             width={IMAGE_WIDTH}
@@ -38,37 +38,39 @@ const Welcome: FC<{ photos: string[] }> = ({
         </div>
         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400 rounded-">
           <h2 className="max-lg:mt-8 mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Welcome to Japan Tour Guide agency
+            Welcome to Tokyo Star Agency
           </h2>
           <div className="mb-4">
             <p>
-              We believe that travel is more than just visiting a destination,
-              but rather a transformational experience that can change your
-              life.{" "}
+              Since our founding in 2017, we have been providing customized
+              private tours and assisting our guests in creating lifelong
+              memories in Japan.
             </p>
             <div className={!showMore ? "gradient-mask-b-50" : ""}>
               <p>
-                We believe that travel is a pilgrimage that can help you
-                discover new perspectives, connect with different cultures, and
-                create lifelong memories.{" "}
+                We believe that travel is more than just visiting a destination;
+                it&apos;s a transformational experience that can change your
+                life. Travel is a pilgrimage that can help you discover new
+                perspectives, connect with different cultures, and give you an
+                opportunity to re-examine yourself.
               </p>
               <p>
-                Our team of specialized guides are not just experts in their
-                fields, but they are also passionate about creating unique and
-                personalized experiences for each of our clients.{" "}
+                Our team of specialized guides are not only experts in their
+                fields but also passionate about creating unique and
+                personalized experiences for each of our clients.
               </p>
-              {showMore && (
+              {/* {showMore && (
                 <p>
                   We call them our &ldquo;&ldquo;star guides&ldquo;&ldquo;
                   because they go above and beyond to ensure that every journey
                   is exceptional.
                 </p>
-              )}
+              )} */}
             </div>
 
-            <Button color="light" onClick={toggleWelcomeText}>
+            {/* <Button color="light" onClick={toggleWelcomeText}>
               {showMore ? "Read less..." : "Read more..."}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
@@ -81,7 +83,7 @@ export default Welcome;
 {
   /* <div>
     //   <p>
-    //     Welcome to our Japan Tour Guide agency, where we believe that travel is
+    //     Welcome to our Tokyo Star Agency, where we believe that travel is
     //     more than just visiting a destination, but rather a transformational
     //     experience that can change your life. We believe that travel is a
     //     pilgrimage that can help you discover new perspectives, connect with

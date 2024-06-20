@@ -34,10 +34,10 @@ export const WelcomeNewsLetterEmail = ({
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`${baseUrl}/assets/images/jtga-logo.png`}
+          src={`${baseUrl}/assets/images/tsa_logo.webp`}
           width="170"
           height="50"
-          alt="Japan Tour Guide Agency"
+          alt="Tokyo Star Agency"
           style={logo}
         />
         <Text style={paragraph}>Hello {email},</Text>

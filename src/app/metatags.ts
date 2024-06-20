@@ -2,11 +2,11 @@ import { Robots } from "next/dist/lib/metadata/types/metadata-types";
 import { Twitter } from "next/dist/lib/metadata/types/twitter-types";
 import { domain } from "@/constants/routes";
 
-export const SITE_NAME = "Japan Tour Guide Agency";
+export const SITE_NAME = "Tokyo Star Agency";
 export const SITE_TITLE =
-  "Japan Tour Guide Agency - Your Ultimate Guide to Japan";
+  "Tokyo Star Agency - Your Ultimate Guide to Japan";
 export const SITE_DESCRIPTION =
-  "Experience the beauty of Japan with Japan Tour Guide Agency. Our expert guides will show you the best sights and sounds of Japan. Book now!";
+  "Experience the beauty of Japan with Tokyo Star Agency. Our expert guides will show you the best sights and sounds of Japan. Book now!";
 export const SITE_IMAGE_URL = process.env.SITE_IMAGE_URL;
 // TODO: modify the site ID for twitter
 const TWITTER_CREATOR = "@japantourguideagency";

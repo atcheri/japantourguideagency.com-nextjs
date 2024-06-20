@@ -14,6 +14,9 @@ const DesktopNavBar: FC = () => {
       style={{ color: textColor }}
       className="hidden md:flex md:gap-x-8 lg:gap-x-12"
     >
+      <Link href={ROUTES.HOME.path} className="flex items-center font-semibold">
+        Home
+      </Link>
       {navBarMenu.map((menu) => (
         <DesktopNavBarMenu
           key={menu.menuTitle}

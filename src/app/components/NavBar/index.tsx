@@ -1,6 +1,8 @@
 import { FC, useEffect, useRef, useState } from "react";
+import { HiMenu } from "react-icons/hi";
 
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Button } from "@/components/ui/button";
+
 import DesktopNavBar from "./DesktopNavBar";
 import LogoLink from "../LogoLink";
 import MobileNavBar from "./MobileNavBar";
@@ -55,27 +57,30 @@ const NavBar: FC = () => {
       ref={headerRef}
     >
       <nav
-        className="container mx-auto max-w-6xl flex items-center justify-between p-2 lg:px-8"
+        className="container mx-auto max-w-6xl flex items-center justify-between p-4 lg:px-8"
         aria-label="Main navigation bar"
       >
-        <div className="flex md:hidden">
-          <button
-            style={{ color: textColor }}
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-8 w-8" aria-hidden="true" />
-          </button>
-        </div>
         <LogoLink />
+        <Button
+          variant="ghost"
+          style={{ color: textColor }}
+          type="button"
+          className="inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden"
+          onClick={() => setMobileMenuOpen(true)}
+        >
+          <span className="sr-only">Open main menu</span>
+          <HiMenu
+            className="size-8"
+            style={{ color: textColor }}
+            aria-hidden="true"
+          />
+        </Button>
         <DesktopNavBar />
+        <MobileNavBar
+          mobileMenuOpen={mobileMenuOpen}
+          mobileMenuClose={() => setMobileMenuOpen(false)}
+        />
       </nav>
-      <MobileNavBar
-        mobileMenuOpen={mobileMenuOpen}
-        mobileMenuClose={() => setMobileMenuOpen(false)}
-      />
     </header>
   );
 };

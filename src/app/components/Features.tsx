@@ -16,13 +16,8 @@ type Feature = {
 const features: Feature[] = [
   {
     title: "Tailored Private Experience",
-    text: "Various tour options are available, allowing you to unlock unique tours and customize your itinerary according to your preferences.",
+    text: "Customize your itinerary according to your preferences and have a hassle-free day with our chauffeured tour.",
     icon: RiCreativeCommonsByLine,
-  },
-  {
-    title: "Full Immersion in Japanese Culture",
-    text: "Immerse yourself in the vibrant tapestry of Japanese culture, exploring ancient villages, sacred shrines, and savoring local cuisine.",
-    icon: GiShintoShrine,
   },
   {
     title: "Expert Local Guides and Drivers",
@@ -30,20 +25,25 @@ const features: Feature[] = [
     icon: GiHiking,
   },
   {
-    title: "Safety Comfort and Seriousness",
-    text: "Experience worry-free travel in Tokyo with a focus on safety, comfort, and expert guidance.",
-    icon: AiOutlineSafetyCertificate,
+    title: "Full Immersion in Japanese Culture",
+    text: "Immerse yourself in the vibrant tapestry of Japanese culture, exploring ancient villages, sacred shrines, and savoring local cuisine.",
+    icon: GiShintoShrine,
   },
-  {
-    title: "Discover Iconic Sites",
-    text: "Experience the wonders of Japan, from its famous landmarks to lesser-known neighborhoods whilst enjoying the cherry blossoms in spring and autumn foliage.",
-    icon: GiFuji,
-  },
-  {
-    title: "Dedicated Customer Service",
-    text: "Receive excellent customer support with high levels of professionalism and attention to detail. Enjoy a seamless and unforgettable travel experience.",
-    icon: RiCustomerService2Line,
-  },
+  // {
+  //   title: "Safety Comfort and Seriousness",
+  //   text: "Experience worry-free travel in Tokyo with a focus on safety, comfort, and expert guidance.",
+  //   icon: AiOutlineSafetyCertificate,
+  // },
+  // {
+  //   title: "Discover Iconic Sites",
+  //   text: "Experience the wonders of Japan, from its famous landmarks to lesser-known neighborhoods whilst enjoying the cherry blossoms in spring and autumn foliage.",
+  //   icon: GiFuji,
+  // },
+  // {
+  //   title: "Dedicated Customer Service",
+  //   text: "Receive excellent customer support with high levels of professionalism and attention to detail. Enjoy a seamless and unforgettable travel experience.",
+  //   icon: RiCustomerService2Line,
+  // },
 ];
 
 const Features = () => {
@@ -55,15 +55,14 @@ const Features = () => {
             Our strengths
           </p>
           <h2 className="text-3xl font-bold mb-6">
-            Why discover <span className="underline text-red-500">Japan </span>
-            with us?
+            Why discover 🇯🇵 {""}
+            <span className="underline text-red-600">Japan</span>
+            {""} with us?
           </h2>
           <p className="text-gray-500 mb-12">
-            Embark on an unforgettable journey through Japan with our tailored
-            and customized private tours, where we offer exceptional service,
-            personalized itineraries, and expert guides to ensure an immersive
-            and extraordinary travel experience that will create lifelong
-            memories.
+            Embark on an unforgettable journey through Japan with us to ensure
+            an immersive and extraordinary travel experience that will create
+            lifelong memories.
           </p>
         </div>
         <div className="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
