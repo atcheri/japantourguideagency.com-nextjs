@@ -38,7 +38,7 @@ const Welcome: FC<{ photos: string[] }> = ({
         </div>
         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400 rounded-">
           <h2 className="max-lg:mt-8 mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Welcome to Tokyo Star Agency
+            Welcome 👋 to Tokyo Star Agency
           </h2>
           <div className="mb-4">
             <p>

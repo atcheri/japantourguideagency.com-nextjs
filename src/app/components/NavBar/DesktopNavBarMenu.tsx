@@ -3,12 +3,12 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import Link from "next/link";
-import { NavBarMenuType } from "../../../helpers/constants";
+import { NavbarMenuType } from "../../../helpers/constants";
 import { RxDot } from "react-icons/rx";
 import { useScrollColor } from "./hooks/useScrollColor";
 import { Separator } from "@/components/ui/separator";
 
-const DesktopNavBarMenu = ({ title, items }: NavBarMenuType) => {
+const DesktopNavBarMenu = ({ title, items }: NavbarMenuType) => {
   const { textColor } = useScrollColor();
   return (
     <Menu as="div" className="relative inline-block text-left">

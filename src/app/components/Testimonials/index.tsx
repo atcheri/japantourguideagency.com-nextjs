@@ -12,6 +12,7 @@ import TestimonialContent from "./TestimonialContent";
 import { tripAdvisorReviewsUrl } from "@/helpers/constants";
 import { useState } from "react";
 import { TestimonialDialog } from "./TestimonialDialog";
+import { useTestimonialModal } from "./hooks/useTestimonialModal";
 
 type FeedbackType = {
   content: string;
@@ -32,7 +33,7 @@ const feedbacks: FeedbackType[] = [
             Tak was early to pick us up and we were all so excited that we were off earlier than expected. Because our first stop was meant to be the Digital Art Exhibit and it was not due to open yet, she added a quick stop at "Baby Liberty" (a miniature of our statue of Liberty, also gifted by the french) along with an additional stop in Odaiba, at a massive statue of one of Japan's Anime favorites, Gundam (19.7 meters). Then on to the museum. It was INCREDIBLE. Such a cool experience for our entire group (8 people from 7 to 43 years old). Lots of different rooms with different themes and interactive experiences.
             Next: Kamakura. Such a beautiful little city. Masae was spot on in this suggestion for us. We saw the great buddha, had lunch, visited Tsurugaoka Hachimangū and wandered through some of the cute streets and shops along the way.
             Lunch note: We had several people in our group on the hunt for great Ramen. Masae and Tak discussed and came up with a great stop for us at a little ramen shop for lunch. They sat and talked with us and really made the experience better for us with their company. Tak helped me decode my puzzle box that I purchased on our way to see the great Buddha. Mmmm. I am still dreaming of that ramen.
-            The drive to and from: Delightful. Such a comfortable van for all eight of us. Masae was eager to share any info along the way or answer any questions. They were very accommodating to our needs, stopping for us to grab some snacks and drinks too.
+            The drive to and from: Delightfßul. Such a comfortable van for all eight of us. Masae was eager to share any info along the way or answer any questions. They were very accommodating to our needs, stopping for us to grab some snacks and drinks too.
             I really have only super positive memories and anecdotes from this experience. It was truly a delight spending the day with Masae and Tak both and our whole group would highly reccomend this trip!
         `,
     title: "It Was Awesome!",
@@ -63,26 +64,27 @@ const feedbacks: FeedbackType[] = [
 ];
 
 const initialModal = {
-  show: false,
+  // show: false,
   title: "",
   content: "",
 };
 
 const Testimonials = () => {
   const [modalContent, setModalContent] = useState<{
-    show: boolean;
+    // show: boolean;
     title: string;
     content: string;
   }>(initialModal);
+  const { onOpen: onOpenModal } = useTestimonialModal();
 
-  const toggleShow = (title: string = "", content: string = "") => {
-    if (modalContent.show) {
-      setModalContent(initialModal);
-      return;
-    }
+  // const toggleShow = (title: string = "", content: string = "") => {
+  //   if (modalContent.show) {
+  //     setModalContent(initialModal);
+  //     return;
+  //   }
 
-    setModalContent({ show: true, content, title });
-  };
+  //   setModalContent({ show: true, content, title });
+  // };
 
   return (
     <section className="container mx-auto py-8 lg:py-16 px-3 sm:text-lg">
@@ -131,14 +133,16 @@ const Testimonials = () => {
                 ))}
               </div>
               <TestimonialDialog
-                open={modalContent.show}
-                toggleShow={() => toggleShow()}
                 title={modalContent.title}
                 description={modalContent.content}
               />
               <p
                 className="mt-2 text-slate-500 cursor-pointer"
-                onClick={() => toggleShow(title, content)}
+                // onClick={() => toggleShow(title, content)}
+                onClick={() => {
+                  setModalContent({ title, content });
+                  onOpenModal();
+                }}
               >
                 <RiDoubleQuotesL className="h-10 w-10 relative -left-5 opacity-40" />
                 <TestimonialContent content={content} />

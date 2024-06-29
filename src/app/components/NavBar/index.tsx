@@ -1,13 +1,14 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { HiMenu } from "react-icons/hi";
+import { AlignJustify } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import DesktopNavBar from "./DesktopNavBar";
 import LogoLink from "../LogoLink";
 import MobileNavBar from "./MobileNavBar";
 import { useScrollColor } from "./hooks/useScrollColor";
 import useWindowSize from "./hooks/useWindowSize";
+import { DesktopNavigationMenu } from "./desktop-navigation-menu";
+import { useMobileNavbar } from "./hooks/use-mobile-navbar";
 
 const HIDE_NAVBAR_THRESHOLD: number = 10;
 const NAVBAR_HIDE_MAX_WIDTH: number = 768;
@@ -17,6 +18,7 @@ const NavBar: FC = () => {
   const { width } = useWindowSize();
   const headerRef = useRef<HTMLDivElement | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { onOpen: onOpenMobileNavbar } = useMobileNavbar();
 
   useEffect(() => {
     let prevPosY = window.scrollY;
@@ -66,16 +68,16 @@ const NavBar: FC = () => {
           style={{ color: textColor }}
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden"
-          onClick={() => setMobileMenuOpen(true)}
+          onClick={onOpenMobileNavbar}
         >
           <span className="sr-only">Open main menu</span>
-          <HiMenu
+          <AlignJustify
             className="size-8"
             style={{ color: textColor }}
             aria-hidden="true"
           />
         </Button>
-        <DesktopNavBar />
+        <DesktopNavigationMenu />
         <MobileNavBar
           mobileMenuOpen={mobileMenuOpen}
           mobileMenuClose={() => setMobileMenuOpen(false)}

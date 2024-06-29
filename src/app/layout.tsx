@@ -13,6 +13,7 @@ import {
 import { Inter } from "next/font/google";
 import Layout from "./components/Layout";
 import { Metadata } from "next";
+import { SheetProvider } from "@/providers/sheet-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-slate-50 dark:bg-slate-900 ${inter.className}`}>
-        <Layout>{children}</Layout>
+        <Layout>
+          <SheetProvider />
+          {children}
+        </Layout>
       </body>
     </html>
   );

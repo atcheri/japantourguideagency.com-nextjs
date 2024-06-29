@@ -2,11 +2,12 @@ import { ROUTES } from "@/constants/routes";
 
 export type MenuItem = {
   name: string;
+  image?: string;
   href: string;
   description?: string;
 };
 
-export type NavBarMenuType = {
+export type NavbarMenuType = {
   title: string;
   items: MenuItem[];
 };
@@ -79,14 +80,20 @@ export const japaneseResorts: MenuItem[] = [
 
 export const companyInfo: MenuItem[] = [
   {
-    name: "Our Company Information",
+    name: "Company Information",
+    image: "/assets/images/tsa_logo.png",
     href: ROUTES.COMPANY.path,
-    // description: "information about our company",
+    description: "information about our company",
   },
   {
-    name: "Our Terms and conditions",
+    name: "Privacy Policy",
     href: ROUTES.TERMS_SERVICE.path,
-    // description: "information about our terms and policy",
+    description: "information about our privacy policy",
+  },
+  {
+    name: "Terms & conditions",
+    href: ROUTES.TERMS_SERVICE.path,
+    description: "information about our terms and conditions",
   },
 ];
 
@@ -103,7 +110,7 @@ export const navBarMenu: {
   //   menuItems: japaneseResorts,
   // },
   {
-    menuTitle: "About Us",
+    menuTitle: "About us",
     menuItems: companyInfo,
   },
 ];
