@@ -4,11 +4,11 @@ import { AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import LogoLink from "../LogoLink";
-import MobileNavBar from "./MobileNavBar";
 import { useScrollColor } from "./hooks/useScrollColor";
 import useWindowSize from "./hooks/useWindowSize";
-import { DesktopNavigationMenu } from "./desktop-navigation-menu";
-import { useMobileNavbar } from "./hooks/use-mobile-navbar";
+
+import { DesktopNavigationMenu } from "./DesktopNavigationMenu";
+import { mobileNavBarState } from "./MobileNavBar/mobileNavBarState";
 
 const HIDE_NAVBAR_THRESHOLD: number = 10;
 const NAVBAR_HIDE_MAX_WIDTH: number = 768;
@@ -17,8 +17,7 @@ const NavBar: FC = () => {
   const { bgColor, textColor } = useScrollColor();
   const { width } = useWindowSize();
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { onOpen: onOpenMobileNavbar } = useMobileNavbar();
+  const { onOpen: onOpenMobileNavbar } = mobileNavBarState();
 
   useEffect(() => {
     let prevPosY = window.scrollY;
@@ -78,10 +77,6 @@ const NavBar: FC = () => {
           />
         </Button>
         <DesktopNavigationMenu />
-        <MobileNavBar
-          mobileMenuOpen={mobileMenuOpen}
-          mobileMenuClose={() => setMobileMenuOpen(false)}
-        />
       </nav>
     </header>
   );

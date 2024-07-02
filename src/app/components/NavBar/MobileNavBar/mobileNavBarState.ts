@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-type MobileNavbarState = {
+type MobileNavBarState = {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
 };
 
-export const useMobileNavbar = create<MobileNavbarState>((set) => ({
+export const mobileNavBarState = create<MobileNavBarState>((set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
