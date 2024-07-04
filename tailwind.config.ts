@@ -82,6 +82,13 @@ const config = {
           "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/hero_zone.jpg')",
         "contact-computer":
           "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/contact_us-scaled.jpg')",
+        "landscape-image": "url(/assets/images/landscape.jpg)",
+      },
+      screens: {
+        "3xl": "1792px",
+        "4xl": "2048px",
+        "5xl": "2304px",
+        "6xl": "2560px",
       },
     },
   },
