@@ -12,7 +12,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 
-type ProductCardProps = {
+type TourcardProps = {
   image: string;
   name: string;
   href: string;
@@ -20,13 +20,7 @@ type ProductCardProps = {
   alt: string;
 };
 
-export const ProductCard = ({
-  alt,
-  href,
-  image,
-  name,
-  text,
-}: ProductCardProps) => {
+export const Tourcard = ({ alt, href, image, name, text }: TourcardProps) => {
   return (
     <Link href={href} target="_blank">
       <Card className="flex flex-col border-2 overflow-hidden min-h-full gap-2">

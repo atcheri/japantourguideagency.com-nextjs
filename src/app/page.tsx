@@ -4,7 +4,7 @@ import NewsLetter from "./components/NewsLetter";
 import Testimonials from "./components/Testimonials";
 import Welcome from "./components/Welcome";
 import { getRandomPhotoPairUrls } from "../helpers/images";
-import ProductsCarousel from "./components/Products/products-carousel";
+import ProductsCarousel from "./components/Products/ProductsCarousel";
 
 const Home = async (): Promise<JSX.Element> => {
   const photos = getRandomPhotoPairUrls();

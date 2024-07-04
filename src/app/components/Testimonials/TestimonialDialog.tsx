@@ -33,12 +33,11 @@ export const TestimonialDialog = ({
 }) => {
   const isDesktop = useMedia("(min-width: 640px)");
   const { isOpen, onClose } = useTestimonialModal();
-  console.log("testimonial dialog", isOpen);
 
   if (isDesktop) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-h-96">
+        <DialogContent className="max-h-[50%]">
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{description}</DialogDescription>
@@ -54,8 +53,11 @@ export const TestimonialDialog = ({
   }
 
   return (
-    <Drawer open={isOpen} onOpenChange={onClose} direction="bottom">
-      {/* TODO: onOpenChange implementation does not work, how to fix ? used onClose props instead in the meanwhile */}
+    <Drawer
+      open={isOpen}
+      onOpenChange={(opened) => !opened && onClose()}
+      direction="bottom"
+    >
       <DrawerContent>
         <ScrollArea className="h-72">
           <DrawerHeader>

@@ -27,7 +27,6 @@ export const MobileNavBar = () => {
   return (
     <Drawer
       open={isOpen}
-      onDrag={(event, perc) => perc >= 0.2 && onClose()}
       onClose={onClose}
       onOpenChange={(opened) => !opened && onClose()}
       direction="right"
@@ -37,9 +36,9 @@ export const MobileNavBar = () => {
           <DrawerHeader>
             <DrawerClose
               asChild
-              className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+              className="absolute right-8 top-8 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
             >
-              <X className="cursor-pointer h-4 w-4" />
+              <X className="cursor-pointer h-6 w-6" />
             </DrawerClose>
           </DrawerHeader>
           <DrawerHeader className="py-4">

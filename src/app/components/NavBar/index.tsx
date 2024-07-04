@@ -58,7 +58,7 @@ const NavBar: FC = () => {
       ref={headerRef}
     >
       <nav
-        className="container mx-auto max-w-6xl flex items-center justify-between p-4 lg:px-8"
+        className="container mx-auto max-w-7xl flex items-center justify-between p-4 xl:px-8"
         aria-label="Main navigation bar"
       >
         <LogoLink />

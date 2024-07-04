@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { fetchProducts } from "@/helpers/products";
-import { ProductCard } from "./product-card";
+import { Tourcard } from "./TourCard";
 
 const ProductsCarousel = () => {
   const tours = use(fetchProducts());
@@ -37,7 +37,7 @@ const ProductsCarousel = () => {
                   key={id}
                   className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
-                  <ProductCard
+                  <Tourcard
                     image={imageSrc}
                     name={name}
                     text={text}

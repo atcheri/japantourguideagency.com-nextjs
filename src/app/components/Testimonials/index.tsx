@@ -138,7 +138,6 @@ const Testimonials = () => {
               />
               <p
                 className="mt-2 text-slate-500 cursor-pointer"
-                // onClick={() => toggleShow(title, content)}
                 onClick={() => {
                   setModalContent({ title, content });
                   onOpenModal();
@@ -174,25 +173,6 @@ const Testimonials = () => {
           </Button>
         </Link>
       </div>
-      {/* <Modal
-        show={modalContent.show}
-        onClose={() => toggleShow()}
-        dismissible={true}
-      >
-        <Modal.Header>{modalContent.title}</Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {modalContent.content}
-            </p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button color="gray" onClick={() => toggleShow()}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </section>
   );
 };
