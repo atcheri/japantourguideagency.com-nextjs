@@ -2,7 +2,7 @@ import { Tour } from "@/types/tour";
 import { apiAllToursUrl } from "@/constants/routes";
 
 export async function fetchProducts(): Promise<Tour[]> {
-  const res = await fetch(apiAllToursUrl);
+  const res = await fetch(apiAllToursUrl, { next: { revalidate: 1 } });
   const json = await res.json();
   if (!json.success) {
     return [];
