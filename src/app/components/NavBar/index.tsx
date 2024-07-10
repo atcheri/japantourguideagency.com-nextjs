@@ -9,6 +9,8 @@ import useWindowSize from "./hooks/useWindowSize";
 
 import { DesktopNavigationMenu } from "./DesktopNavigationMenu";
 import { mobileNavBarState } from "./MobileNavBar/mobileNavBarState";
+import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 const HIDE_NAVBAR_THRESHOLD: number = 10;
 const NAVBAR_HIDE_MAX_WIDTH: number = 768;
@@ -53,8 +55,10 @@ const NavBar: FC = () => {
 
   return (
     <header
-      style={{ backgroundColor: bgColor }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+      className={cn(
+        "fixed left-0 top-0 w-full z-10 ease-in duration-300",
+        `bg-${bgColor}`
+      )}
       ref={headerRef}
     >
       <nav
@@ -64,20 +68,22 @@ const NavBar: FC = () => {
         <LogoLink />
         <Button
           variant="ghost"
-          style={{ color: textColor }}
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden"
+          className={cn(
+            "inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden",
+            `text-${textColor}`
+          )}
           onClick={onOpenMobileNavbar}
         >
           <span className="sr-only">Open main menu</span>
           <AlignJustify
-            className="size-8"
-            style={{ color: textColor }}
+            className={cn("size-8", `text-${textColor}`)}
             aria-hidden="true"
           />
         </Button>
         <DesktopNavigationMenu />
       </nav>
+      <Separator className={cn("h-0", bgColor === "white" && "h-[1px]")} />
     </header>
   );
 };

@@ -6,8 +6,11 @@ export const useScrollColor = () => {
   const path = usePathname();
   const isHome = path === "/";
 
-  const [bgColor, setBgColor] = useState(isHome ? "transparent" : "white");
+  const initialBgColor = "black bg-opacity-30";
+
+  const [bgColor, setBgColor] = useState(isHome ? initialBgColor : "white");
   const [textColor, setTextColor] = useState(isHome ? "white" : "black");
+
   useEffect(() => {
     if (!isHome) {
       return;
@@ -17,7 +20,7 @@ export const useScrollColor = () => {
         setBgColor("white");
         setTextColor("black");
       } else {
-        setBgColor("transparent");
+        setBgColor(initialBgColor);
         setTextColor("white");
       }
     };
@@ -29,7 +32,7 @@ export const useScrollColor = () => {
 
   useEffect(() => {
     if (isHome && window.scrollY < 90) {
-      setBgColor("transparent");
+      setBgColor(initialBgColor);
       setTextColor("white");
     } else {
       setBgColor("white");

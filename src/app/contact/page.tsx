@@ -37,8 +37,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-screen 2xl:container mx-auto">
-      <div className="h-2/3 bg-contact-computer bg-cover bg-bottom" />
+    <section className="h-screen 4xl:container mx-auto">
+      <div className="h-2/3 bg-contact-us bg-cover bg-bottom" />
       <div className="max-w-4xl mx-auto px-8 sm:px-16">
         <div className="bg-opacity-75 bg-slate-950 w-full shadow rounded p-4 -mt-[470px] lg:-mt-96 ">
           <h1 className="text-white text-3xl font-bold leading-7 text-center mb-8">

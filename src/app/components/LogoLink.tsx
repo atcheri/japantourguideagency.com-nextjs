@@ -15,7 +15,10 @@ const LogoLink: FC<LogoLinkProps> = ({
   width = 48,
 }) => {
   return (
-    <Link href="/" className="bg-white rounded-full p-0.5">
+    <Link
+      href="/"
+      className="bg-white rounded-full p-0.5 border-2 border-red-300"
+    >
       <Image
         className="h-10 w-auto"
         src={src}

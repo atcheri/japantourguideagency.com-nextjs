@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -20,6 +19,7 @@ import { useScrollColor } from "./hooks/useScrollColor";
 
 export function DesktopNavigationMenu() {
   const { textColor } = useScrollColor();
+  // const textColor = "white";
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="md:gap-x-2 lg:gap-x-4">
@@ -28,9 +28,9 @@ export function DesktopNavigationMenu() {
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
-                "bg-transparent text-md font-medium hover:bg-accent/20 focus:bg-accent/20"
+                "bg-transparent text-md font-semibold hover:bg-accent-foreground/5 focus:bg-accent-foreground/5",
+                `text-${textColor} hover:text-${textColor} focus:text-${textColor}`
               )}
-              style={{ color: textColor }}
             >
               Home
             </NavigationMenuLink>
@@ -40,8 +40,10 @@ export function DesktopNavigationMenu() {
         {navBarMenu.map((menu) => (
           <NavigationMenuItem key={menu.menuTitle}>
             <NavigationMenuTrigger
-              className="bg-transaprent text-md font-medium hover:bg-accent/20 data-[active]:bg-accent/20 data-[state=open]:bg-accent/20"
-              style={{ color: textColor }}
+              className={cn(
+                "bg-transaprent text-md font-semibold hover:bg-accent-foreground/5 focus:bg-accent-foreground/5 hover:text-accent focus:text-accent data-[active]:bg-accent-foreground/5 data-[state=open]:bg-accent-foreground/5",
+                `text-${textColor} hover:text-${textColor} focus:text-${textColor}`
+              )}
             >
               {menu.menuTitle}
             </NavigationMenuTrigger>
@@ -64,9 +66,9 @@ export function DesktopNavigationMenu() {
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
-                "bg-transparent text-md font-medium hover:bg-accent/20 focus:bg-accent/20"
+                "bg-transparent text-md font-semibold hover:bg-accent-foreground/5 focus:bg-accent-foreground/5",
+                `text-${textColor} hover:text-${textColor} focus:text-${textColor}`
               )}
-              style={{ color: textColor }}
             >
               Contact us
             </NavigationMenuLink>

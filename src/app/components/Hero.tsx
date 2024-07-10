@@ -14,7 +14,7 @@ const ClickToAction = () => {
         <Button
           size="lg"
           variant="shine"
-          className="text-md text-primary font-semibold border border-slate-100"
+          className="text-md text-primary font-semibold border border-slate-100 bg-white/30"
         >
           Disover now
         </Button>
@@ -25,7 +25,7 @@ const ClickToAction = () => {
 
 const Hero = () => {
   return (
-    <section className="bg-hero-pattern 4xl:bg-landscape-image bg-center bg-cover bg-no-repeat">
+    <section className="bg-hero-background bg-center bg-cover">
       <div className="container h-[40vh] md:h-[60vh] xl:h-screen flex items-center justify-center py-4">
         <div className="w-3/5 h-2/5 place-self-end">
           <ClickToAction />

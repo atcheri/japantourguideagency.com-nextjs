@@ -80,9 +80,10 @@ const config = {
       backgroundImage: {
         "hero-pattern":
           "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/hero_zone.jpg')",
-        "contact-computer":
-          "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/contact_us-scaled.jpg')",
-        "landscape-image": "url(/assets/images/landscape.jpg)",
+        "hero-background":
+          "url('https://store.japantourguideagency.com/wp-content/uploads/2024/05/Lake-Kawaguchiko.jpg')",
+        "contact-us":
+          "url('https://store.japantourguideagency.com/wp-content/uploads/2024/05/contact_us.jpg')",
       },
       screens: {
         "3xl": "1792px",
