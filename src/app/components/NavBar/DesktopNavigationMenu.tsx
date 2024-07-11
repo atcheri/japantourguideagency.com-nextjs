@@ -19,7 +19,7 @@ import { useScrollColor } from "./hooks/useScrollColor";
 
 export function DesktopNavigationMenu() {
   const { textColor } = useScrollColor();
-  // const textColor = "white";
+
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="md:gap-x-2 lg:gap-x-4">

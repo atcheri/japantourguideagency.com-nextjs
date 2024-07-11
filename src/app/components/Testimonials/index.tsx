@@ -101,9 +101,9 @@ const Testimonials = () => {
           <Link
             href={tripAdvisorReviewsUrl}
             target="_blank"
-            className="duration-200 hover:text-blue-600"
+            className="text-blue-600 hover:text-blue-500 transition-transform duration-200"
           >
-            Tripadvisor <RxExternalLink className="inline-block" />
+            Viator <RxExternalLink className="inline-block" />
           </Link>
         </p>
       </div>

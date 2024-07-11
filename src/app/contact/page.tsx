@@ -1,9 +1,14 @@
 "use client";
 
-import { Button } from "flowbite-react";
-import ResponseToast from "./ResponseToast";
 import { sendContactEmail } from "./actions";
 import { useState } from "react";
+
+import { useContactResponseDialogModal } from "./hooks/useContactResponseDialogModal";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { ContactResponseDialog } from "./ContactResponseDialog";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 export type ContactFormState = "empty" | "sending" | "success" | "error";
 
@@ -11,6 +16,20 @@ const Contact = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [state, setState] = useState<ContactFormState>("empty");
   const labelClass = "text-white font-semibold leading-none";
+  const { onClose, onOpen } = useContactResponseDialogModal();
+
+  if (state === "error") {
+    toast.warning("Your message was not sent.", {
+      description: "Please try again later",
+      action: {
+        label: "Close",
+        onClick: () => {
+          onClose();
+          setState("empty");
+        },
+      },
+    });
+  }
 
   const handleSendContactEmail = async (data: FormData) => {
     setLoading(() => true);
@@ -29,6 +48,7 @@ const Contact = () => {
       });
 
       setState("success");
+      onOpen();
     } catch (err) {
       setState("error");
     } finally {
@@ -94,14 +114,19 @@ const Contact = () => {
                 ></textarea>
               </div>
             </div>
-            <Button type="submit" disabled={loading || state === "success"}>
-              Send message
+            <Button
+              type="submit"
+              size="lg"
+              disabled={loading || state === "success"}
+            >
+              {loading ? <Loader2 className="size-6 animate-spin" /> : "Send"}
             </Button>
           </form>
         </div>
       </div>
       <div className="w-full flex justify-center mt-10">
-        <ResponseToast state={state} />
+        <ContactResponseDialog />
+        <Toaster position="bottom-right" richColors />
       </div>
     </section>
   );

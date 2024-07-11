@@ -115,5 +115,4 @@ export const navBarMenu: {
   },
 ];
 
-export const tripAdvisorReviewsUrl =
-  "https://www.tripadvisor.com/Attraction_Review-g1066451-d26319513-Reviews-Tokyo_Star_Agency-Minato_Tokyo_Tokyo_Prefecture_Kanto.html";
+export const tripAdvisorReviewsUrl = "https://www.viator.com/operator/40436";
