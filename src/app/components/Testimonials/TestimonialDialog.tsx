@@ -37,10 +37,10 @@ export const TestimonialDialog = ({
   if (isDesktop) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-h-[50%]">
+        <DialogContent className="max-h-[66%] min-w-[640px]">
           <DialogHeader className="px-4 space-y-6">
             <DialogTitle>{title}</DialogTitle>
-            <DialogDescription className="leading-loose">
+            <DialogDescription className="leading-loose text-lg">
               {description}
             </DialogDescription>
           </DialogHeader>
@@ -64,7 +64,7 @@ export const TestimonialDialog = ({
         <ScrollArea className="h-96">
           <DrawerHeader className="px-8 space-y-4">
             <DrawerTitle>{title}</DrawerTitle>
-            <DrawerDescription className="text-start leading-loose whitespace-pre-line">
+            <DrawerDescription className="text-start text-md leading-loose whitespace-pre-line">
               {description}
             </DrawerDescription>
           </DrawerHeader>

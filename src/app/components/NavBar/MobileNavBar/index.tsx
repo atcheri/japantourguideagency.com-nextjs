@@ -38,14 +38,14 @@ export const MobileNavBar = () => {
               asChild
               className="absolute right-8 top-8 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
             >
-              <X className="cursor-pointer h-6 w-6" />
+              <X className="cursor-pointer h-7 w-7" />
             </DrawerClose>
           </DrawerHeader>
           <DrawerHeader className="py-4">
             <DrawerClose asChild>
               <Link
                 href={ROUTES.HOME.path}
-                className="font-medium hover:underline"
+                className="font-bold hover:underline"
               >
                 Home
               </Link>
@@ -55,7 +55,7 @@ export const MobileNavBar = () => {
           <Accordion type="single" collapsible>
             {navBarMenu.map((menu, index) => (
               <AccordionItem key={menu.menuTitle} value={menu.menuTitle}>
-                <AccordionTrigger className="flex justify-center sm:justify-between sm:p-4">
+                <AccordionTrigger className="flex justify-center sm:justify-between sm:p-4 font-bold">
                   {menu.menuTitle}
                 </AccordionTrigger>
                 <AccordionContent>
@@ -77,7 +77,7 @@ export const MobileNavBar = () => {
             <DrawerClose asChild>
               <Link
                 href={ROUTES.CONTACT.path}
-                className="font-medium hover:underline"
+                className="font-bold hover:underline"
               >
                 Contact us
               </Link>

@@ -19,13 +19,15 @@ const LogoLink: FC<LogoLinkProps> = ({
       href="/"
       className="bg-white rounded-full p-0.5 border-2 border-red-300"
     >
-      <Image
-        className="h-10 w-auto"
-        src={src}
-        alt={SITE_NAME}
-        height={height}
-        width={width}
-      />
+      <div className="size-8 sm:size-10 relative shrink-0">
+        <Image
+          className="shrink-0"
+          src={src}
+          alt={SITE_NAME}
+          height={height}
+          width={width}
+        />
+      </div>
     </Link>
   );
 };
