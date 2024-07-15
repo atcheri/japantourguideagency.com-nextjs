@@ -116,3 +116,6 @@ export const navBarMenu: {
 ];
 
 export const tripAdvisorReviewsUrl = "https://www.viator.com/operator/40436";
+export const welcomeVideoUrl = "https://www.youtube.com/embed/Z8EGy3nhpNI";
+export const welcomeVideoThumbnail =
+  "https://i.ytimg.com/vi_webp/Z8EGy3nhpNI/maxresdefault.webp";
