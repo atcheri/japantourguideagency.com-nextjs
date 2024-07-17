@@ -10,12 +10,13 @@ import {
   viewPortMeta,
 } from "./metatags";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
-import { Metadata } from "next";
-import { Toaster } from "sonner";
 import Layout from "./components/Layout";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID || "";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-slate-50 dark:bg-slate-900 ${inter.className}`}>
         <Layout>{children}</Layout>
+        <GoogleAnalytics gaId={googleAnalyticsId} />
       </body>
     </html>
   );

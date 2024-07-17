@@ -7,8 +7,8 @@ export const Youtube = (props: SVGProps<SVGSVGElement>) => {
       viewBox="5.24 13.434 54.049 37.945"
       width="2500"
       xmlns="http://www.w3.org/2000/svg"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...props}
     >
       <path
