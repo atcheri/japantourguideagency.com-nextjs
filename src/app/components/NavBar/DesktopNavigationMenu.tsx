@@ -54,7 +54,7 @@ export function DesktopNavigationMenu() {
                   "grid w-[400px] gap-3 p-4 md:min-w-min ",
                   menu.menuItems.length > 2
                     ? "md:grid-cols-2 lg:w-[600px]"
-                    : "lg:w-[250px]"
+                    : "lg:w-[360px]"
                 )}
               >
                 {menu.menuItems.map((item) => (

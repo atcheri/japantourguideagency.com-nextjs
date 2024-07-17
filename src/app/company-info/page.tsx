@@ -1,9 +1,9 @@
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-
 import {
   INFO_MAIL_ADDRESS,
   TRAVEL_AGENCY_LICENSE_NUMBER,
 } from "@/constants/misc";
+import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+
 import Link from "next/link";
 
 const OurCompany = () => {
@@ -15,7 +15,7 @@ const OurCompany = () => {
         </h1>
         <div className="text-slate-700">
           <ul className="px-6 space-y-3 text-lg font-semibold">
-            <li>Tokyo Star Agency</li>
+            <li>Japan Star Travel Agency</li>
             <li>Founded in 2014 Tokyo, Japan</li>
             <li>
               contact:&nbsp;
