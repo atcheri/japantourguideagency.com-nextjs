@@ -1,15 +1,12 @@
 "use client";
 
-import { useMedia } from "react-use";
-
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
-  DialogHeader,
-  DialogClose,
   DialogFooter,
+  DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
 import {
@@ -21,7 +18,10 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@/components/ui/drawer";
+
+import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useMedia } from "react-use";
 import { useTestimonialModal } from "./hooks/useTestimonialModal";
 
 export const TestimonialDialog = ({
@@ -37,11 +37,11 @@ export const TestimonialDialog = ({
   if (isDesktop) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="max-h-[66%] min-w-[640px]">
+        <DialogContent className="max-h-[66%] min-w-[640px] max-w-4xl">
           <DialogHeader className="px-4 space-y-6">
             <DialogTitle>{title}</DialogTitle>
-            <DialogDescription className="leading-loose text-lg">
-              {description}
+            <DialogDescription className="text-lg leading-loose">
+              <div dangerouslySetInnerHTML={{ __html: description }} />
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -64,8 +64,8 @@ export const TestimonialDialog = ({
         <ScrollArea className="h-96">
           <DrawerHeader className="px-8 space-y-4">
             <DrawerTitle>{title}</DrawerTitle>
-            <DrawerDescription className="text-start text-md leading-loose whitespace-pre-line">
-              {description}
+            <DrawerDescription className="text-start text-md leading-loose">
+              <div dangerouslySetInnerHTML={{ __html: description }} />
             </DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>

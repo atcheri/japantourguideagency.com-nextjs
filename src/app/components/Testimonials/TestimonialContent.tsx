@@ -7,7 +7,10 @@ type TestimonialContentProps = {
 const TestimonialContent: FC<TestimonialContentProps> = ({ content }) => {
   return (
     <>
-      {content.slice(0, 144)} ... <br />
+      <div
+        dangerouslySetInnerHTML={{ __html: `${content.slice(0, 144)}...` }}
+      />
+      <br />
       <span className="italic">read more</span>
     </>
   );
