@@ -1,9 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +11,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
+import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
+import { cn } from "@/lib/utils";
 import { navBarMenu } from "@/helpers/constants";
 import { useScrollColor } from "./hooks/useScrollColor";
 
@@ -23,7 +24,7 @@ export function DesktopNavigationMenu() {
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="md:gap-x-2 lg:gap-x-4">
-        <NavigationMenuItem>
+        <NavigationMenu>
           <Link href={ROUTES.HOME.path} legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(
@@ -35,7 +36,7 @@ export function DesktopNavigationMenu() {
               Home
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenu>
 
         {navBarMenu.map((menu) => (
           <NavigationMenuItem key={menu.menuTitle}>
@@ -48,7 +49,14 @@ export function DesktopNavigationMenu() {
               {menu.menuTitle}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:min-w-min md:grid-cols-2 lg:w-[600px]">
+              <ul
+                className={cn(
+                  "grid w-[400px] gap-3 p-4 md:min-w-min ",
+                  menu.menuItems.length > 2
+                    ? "md:grid-cols-2 lg:w-[600px]"
+                    : "lg:w-[250px]"
+                )}
+              >
                 {menu.menuItems.map((item) => (
                   <ListItem key={item.name} title={item.name} href={item.href}>
                     {item.description}

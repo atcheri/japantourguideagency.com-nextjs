@@ -83,17 +83,10 @@ export const companyInfo: MenuItem[] = [
     name: "Company Information",
     image: "/assets/images/tsa_logo.png",
     href: ROUTES.COMPANY.path,
-    description: "information about our company",
-  },
-  {
-    name: "Privacy Policy",
-    href: ROUTES.TERMS_SERVICE.path,
-    description: "information about our privacy policy",
   },
   {
     name: "Terms & conditions",
     href: ROUTES.TERMS_SERVICE.path,
-    description: "information about our terms and conditions",
   },
 ];
 
@@ -105,10 +98,6 @@ export const navBarMenu: {
     menuTitle: "Tours",
     menuItems: bestTours,
   },
-  // {
-  //   menuTitle: "Japanese Resorts",
-  //   menuItems: japaneseResorts,
-  // },
   {
     menuTitle: "About us",
     menuItems: companyInfo,
