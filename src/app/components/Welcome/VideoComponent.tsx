@@ -1,7 +1,7 @@
-import { welcomeVideoThumbnail, welcomeVideoUrl } from "@/helpers/constants";
 import Image from "next/image";
 import { WelcomeVideodialog } from "./VideoDialog";
 import { Youtube } from "@/components/icons/youtube";
+import { welcomeVideoThumbnail } from "@/helpers/constants";
 
 export const VideoComponent = () => {
   return (
