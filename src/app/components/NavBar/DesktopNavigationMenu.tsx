@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import Link from "next/link";
-import { ROUTES } from "@/constants/routes";
+import { ROUTES, STORE_ROUTES } from "@/constants/routes";
 import { cn } from "@/lib/utils";
 import { navBarMenu } from "@/helpers/constants";
 import { useScrollColor } from "./hooks/useScrollColor";
@@ -25,7 +25,7 @@ export function DesktopNavigationMenu() {
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList className="md:gap-x-2 lg:gap-x-4">
         <NavigationMenu>
-          <Link href={ROUTES.HOME.path} legacyBehavior passHref>
+          <Link href={STORE_ROUTES.STORE.path} legacyBehavior passHref>
             <NavigationMenuLink
               className={cn(
                 navigationMenuTriggerStyle(),
@@ -33,7 +33,7 @@ export function DesktopNavigationMenu() {
                 `text-${textColor} hover:text-${textColor} focus:text-${textColor}`
               )}
             >
-              Home
+              Store
             </NavigationMenuLink>
           </Link>
         </NavigationMenu>
