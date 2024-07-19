@@ -1,5 +1,5 @@
 import { Article } from "@/app/articles/types";
-import { apiEndpoint } from "@/constants/server-contants";
+import { apiEndpoint } from "@/constants/server-constants";
 
 /**
  * Interface for post title, content and excerpt

@@ -1,7 +1,7 @@
 import { stylePostContent } from "../helpers";
 import { fetchPostBySlug } from "@/helpers/post";
 import { Article } from "../types";
-import { apiEndpoint } from "@/constants/server-contants";
+import { apiEndpoint } from "@/constants/server-constants";
 
 const postEndpoint = `${apiEndpoint}/posts`;
 
