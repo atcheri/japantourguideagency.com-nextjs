@@ -1,9 +1,14 @@
 "use client";
 
-import { Button } from "flowbite-react";
-import ResponseToast from "./ResponseToast";
 import { sendContactEmail } from "./actions";
 import { useState } from "react";
+
+import { useContactResponseDialogModal } from "./hooks/useContactResponseDialogModal";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { ContactResponseDialog } from "./ContactResponseDialog";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 export type ContactFormState = "empty" | "sending" | "success" | "error";
 
@@ -11,6 +16,20 @@ const Contact = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [state, setState] = useState<ContactFormState>("empty");
   const labelClass = "text-white font-semibold leading-none";
+  const { onClose, onOpen } = useContactResponseDialogModal();
+
+  if (state === "error") {
+    toast.warning("Your message was not sent.", {
+      description: "Please try again later",
+      action: {
+        label: "Close",
+        onClick: () => {
+          onClose();
+          setState("empty");
+        },
+      },
+    });
+  }
 
   const handleSendContactEmail = async (data: FormData) => {
     setLoading(() => true);
@@ -29,6 +48,7 @@ const Contact = () => {
       });
 
       setState("success");
+      onOpen();
     } catch (err) {
       setState("error");
     } finally {
@@ -37,8 +57,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-screen 2xl:container mx-auto">
-      <div className="h-2/3 bg-contact-computer bg-cover bg-bottom" />
+    <section className="h-screen 4xl:container mx-auto">
+      <div className="h-2/3 bg-contact-us bg-cover bg-bottom" />
       <div className="max-w-4xl mx-auto px-8 sm:px-16">
         <div className="bg-opacity-75 bg-slate-950 w-full shadow rounded p-4 -mt-[470px] lg:-mt-96 ">
           <h1 className="text-white text-3xl font-bold leading-7 text-center mb-8">
@@ -94,14 +114,19 @@ const Contact = () => {
                 ></textarea>
               </div>
             </div>
-            <Button type="submit" disabled={loading || state === "success"}>
-              Send message
+            <Button
+              type="submit"
+              size="lg"
+              disabled={loading || state === "success"}
+            >
+              {loading ? <Loader2 className="size-6 animate-spin" /> : "Send"}
             </Button>
           </form>
         </div>
       </div>
       <div className="w-full flex justify-center mt-10">
-        <ResponseToast state={state} />
+        <ContactResponseDialog />
+        <Toaster position="bottom-right" richColors />
       </div>
     </section>
   );

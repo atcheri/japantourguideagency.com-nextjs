@@ -2,11 +2,12 @@ import { ROUTES } from "@/constants/routes";
 
 export type MenuItem = {
   name: string;
+  image?: string;
   href: string;
   description?: string;
 };
 
-export type NavBarMenuType = {
+export type NavbarMenuType = {
   title: string;
   items: MenuItem[];
 };
@@ -79,14 +80,13 @@ export const japaneseResorts: MenuItem[] = [
 
 export const companyInfo: MenuItem[] = [
   {
-    name: "Our Company Information",
+    name: "Company Information",
+    image: "/assets/images/tsa_logo.png",
     href: ROUTES.COMPANY.path,
-    // description: "information about our company",
   },
   {
-    name: "Our Terms and conditions",
+    name: "Terms & conditions",
     href: ROUTES.TERMS_SERVICE.path,
-    // description: "information about our terms and policy",
   },
 ];
 
@@ -98,15 +98,13 @@ export const navBarMenu: {
     menuTitle: "Tours",
     menuItems: bestTours,
   },
-  // {
-  //   menuTitle: "Japanese Resorts",
-  //   menuItems: japaneseResorts,
-  // },
   {
-    menuTitle: "About Us",
+    menuTitle: "About us",
     menuItems: companyInfo,
   },
 ];
 
-export const tripAdvisorReviewsUrl =
-  "https://www.tripadvisor.com/Attraction_Review-g1066451-d26319513-Reviews-Tokyo_Star_Agency-Minato_Tokyo_Tokyo_Prefecture_Kanto.html";
+export const tripAdvisorReviewsUrl = "https://www.viator.com/operator/40436";
+export const welcomeVideoUrl = "https://www.youtube.com/embed/Z8EGy3nhpNI";
+export const welcomeVideoThumbnail =
+  "https://i.ytimg.com/vi_webp/Z8EGy3nhpNI/maxresdefault.webp";

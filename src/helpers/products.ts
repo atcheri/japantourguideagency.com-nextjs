@@ -1,8 +1,9 @@
+import { ONE_HOUR } from "@/constants/time";
 import { Tour } from "@/types/tour";
 import { apiAllToursUrl } from "@/constants/routes";
 
 export async function fetchProducts(): Promise<Tour[]> {
-  const res = await fetch(apiAllToursUrl);
+  const res = await fetch(apiAllToursUrl, { next: { revalidate: ONE_HOUR } });
   const json = await res.json();
   if (!json.success) {
     return [];

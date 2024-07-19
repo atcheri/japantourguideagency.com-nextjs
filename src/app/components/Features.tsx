@@ -55,7 +55,7 @@ const Features = () => {
             Our strengths
           </p>
           <h2 className="text-3xl font-bold mb-6">
-            Why discover 🇯🇵 {""}
+            Why discover {""}
             <span className="underline text-red-600">Japan</span>
             {""} with us?
           </h2>

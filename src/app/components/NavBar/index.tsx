@@ -1,13 +1,16 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { HiMenu } from "react-icons/hi";
+import { AlignJustify } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import DesktopNavBar from "./DesktopNavBar";
 import LogoLink from "../LogoLink";
-import MobileNavBar from "./MobileNavBar";
 import { useScrollColor } from "./hooks/useScrollColor";
 import useWindowSize from "./hooks/useWindowSize";
+
+import { DesktopNavigationMenu } from "./DesktopNavigationMenu";
+import { mobileNavBarState } from "./MobileNavBar/mobileNavBarState";
+import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 const HIDE_NAVBAR_THRESHOLD: number = 10;
 const NAVBAR_HIDE_MAX_WIDTH: number = 768;
@@ -16,7 +19,7 @@ const NavBar: FC = () => {
   const { bgColor, textColor } = useScrollColor();
   const { width } = useWindowSize();
   const headerRef = useRef<HTMLDivElement | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { onOpen: onOpenMobileNavbar } = mobileNavBarState();
 
   useEffect(() => {
     let prevPosY = window.scrollY;
@@ -52,35 +55,35 @@ const NavBar: FC = () => {
 
   return (
     <header
-      style={{ backgroundColor: bgColor }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+      className={cn(
+        "fixed left-0 top-0 w-full z-10 ease-in duration-300",
+        `bg-${bgColor}`
+      )}
       ref={headerRef}
     >
       <nav
-        className="container mx-auto max-w-6xl flex items-center justify-between p-4 lg:px-8"
+        className="container mx-auto max-w-7xl flex items-center justify-between p-4 xl:px-8"
         aria-label="Main navigation bar"
       >
         <LogoLink />
         <Button
           variant="ghost"
-          style={{ color: textColor }}
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden"
-          onClick={() => setMobileMenuOpen(true)}
+          className={cn(
+            "inline-flex items-center justify-center rounded-md p-2.5 hover:bg-accent/5 md:hidden",
+            `text-${textColor}`
+          )}
+          onClick={onOpenMobileNavbar}
         >
           <span className="sr-only">Open main menu</span>
-          <HiMenu
-            className="size-8"
-            style={{ color: textColor }}
+          <AlignJustify
+            className={cn("size-8", `text-${textColor}`)}
             aria-hidden="true"
           />
         </Button>
-        <DesktopNavBar />
-        <MobileNavBar
-          mobileMenuOpen={mobileMenuOpen}
-          mobileMenuClose={() => setMobileMenuOpen(false)}
-        />
+        <DesktopNavigationMenu />
       </nav>
+      <Separator className={cn("h-0", bgColor === "white" && "h-[1px]")} />
     </header>
   );
 };

@@ -14,7 +14,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "8xl": "1600px",
+        "8xl": "1920px",
       },
     },
     extend: {
@@ -80,8 +80,16 @@ const config = {
       backgroundImage: {
         "hero-pattern":
           "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/hero_zone.jpg')",
-        "contact-computer":
-          "url('http://store.japantourguideagency.com/wp-content/uploads/2024/05/contact_us-scaled.jpg')",
+        "hero-background":
+          "url('https://store.japantourguideagency.com/wp-content/uploads/2024/05/Lake-Kawaguchiko.jpg')",
+        "contact-us":
+          "url('https://store.japantourguideagency.com/wp-content/uploads/2024/05/contact_us.jpg')",
+      },
+      screens: {
+        "3xl": "1792px",
+        "4xl": "2048px",
+        "5xl": "2304px",
+        "6xl": "2560px",
       },
     },
   },
